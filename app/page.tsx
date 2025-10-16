@@ -17,7 +17,7 @@ export default function Home() {
               <LazyBeams
                 beamWidth={3}
                 beamHeight={25}
-                beamNumber={10}
+                beamNumber={6}
                 speed={2}
                 noiseIntensity={2}
                 scale={0.2}

@@ -356,7 +356,18 @@ const MergedPlanes = forwardRef<
     () => createStackedPlanesBufferGeometry(count, width, height, 0, 100),
     [count, width, height]
   );
+  
+  // Optimisation: Limiter le framerate à 30fps et pause quand inactif
+  const lastUpdate = useRef(0);
   useFrame((_, delta) => {
+    // Pause si tab inactive (Page Visibility API)
+    if (typeof document !== 'undefined' && document.hidden) return;
+    
+    // Throttle à 30fps (1000ms / 30 = ~33ms)
+    const now = performance.now();
+    if (now - lastUpdate.current < 33) return;
+    lastUpdate.current = now;
+    
     mesh.current.material.uniforms.time.value += 0.1 * delta;
   });
   return <mesh ref={mesh} geometry={geometry} material={material} />;

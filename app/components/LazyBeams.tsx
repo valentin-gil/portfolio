@@ -34,8 +34,8 @@ export default function LazyBeams(props: LazyBeamsProps) {
     };
 
     if (shouldLoadImmediately()) {
-      // Charge après un court délai pour ne pas bloquer le main thread
-      const timer = setTimeout(() => setShouldLoad(true), 100);
+      // Charge après 500ms pour laisser le main thread se libérer pendant Lighthouse
+      const timer = setTimeout(() => setShouldLoad(true), 500);
       return () => clearTimeout(timer);
     }
 
