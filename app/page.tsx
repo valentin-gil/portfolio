@@ -13,7 +13,7 @@ export default function Home() {
         <div className="relative h-screen">
           {/* Beams en arrière-plan - chargé intelligemment */}
           <div className="absolute inset-0 w-full h-full -z-10">
-            <Suspense fallback={<div className="absolute inset-0 w-full h-full bg-white dark:bg-[#191919]" />}>
+            <Suspense fallback={<div className="absolute inset-0 w-full h-full bg-[#dddddd] dark:bg-[#070707]" />}>
               <LazyBeams
                 beamWidth={3}
                 beamHeight={25}

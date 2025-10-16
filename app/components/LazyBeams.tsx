@@ -68,7 +68,7 @@ export default function LazyBeams(props: LazyBeamsProps) {
       {shouldLoad ? (
         <Beams {...props} />
       ) : (
-        <div className="absolute inset-0 w-full h-full bg-white dark:bg-[#191919]" />
+        <div className="absolute inset-0 w-full h-full bg-[#dddddd] dark:bg-[#070707]" />
       )}
     </div>
   );
