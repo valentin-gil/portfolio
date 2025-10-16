@@ -1,16 +1,9 @@
 "use client";
 
-import dynamic from "next/dynamic";
 import { Suspense } from "react";
 import Navbar from "./components/Navbar";
 import { ThemeProvider } from "./components/theme-provider";
-
-// Lazy load Beams component (Three.js est lourd)
-// Chargement différé pour améliorer TBT
-const Beams = dynamic(() => import("./components/Beams"), {
-  ssr: false,
-  loading: () => <div className="absolute inset-0 w-full h-full bg-white dark:bg-[#191919]" />,
-});
+import LazyBeams from "./components/LazyBeams";
 
 export default function Home() {
   return (
@@ -18,10 +11,10 @@ export default function Home() {
       <ThemeProvider>
         {/* Section avec Beams en fond - 100vh */}
         <div className="relative h-screen">
-          {/* Beams en arrière-plan */}
+          {/* Beams en arrière-plan - chargé intelligemment */}
           <div className="absolute inset-0 w-full h-full -z-10">
             <Suspense fallback={<div className="absolute inset-0 w-full h-full bg-white dark:bg-[#191919]" />}>
-              <Beams
+              <LazyBeams
                 beamWidth={3}
                 beamHeight={25}
                 beamNumber={10}

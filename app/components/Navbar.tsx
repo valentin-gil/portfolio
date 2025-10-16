@@ -19,7 +19,7 @@ export default function Navbar() {
 
           {/* Menu Desktop */}
           <div className="hidden md:block ml-8">
-            <div className="flex items-baseline space-x-2">
+            <ul className="flex items-baseline space-x-2">
               <a href="#accueil" className="relative overflow-hidden px-4 py-2 rounded-full text-sm font-medium text-gray-700 dark:text-gray-200 transition-all duration-300 group">
                 <li className="group overflow-hidden relative">
                   <div className="translate-y-0 skew-y-0 transition duration-500 group-hover:-translate-y-[125%] group-hover:skew-y-8">Accueil</div>
@@ -44,7 +44,7 @@ export default function Navbar() {
                   <div className="absolute top-0 left-0 translate-y-[125%] skew-y-8 transition duration-500 group-hover:translate-y-0 group-hover:skew-y-0">Contact</div>
                 </li>
               </a>
-            </div>
+            </ul>
           </div>
 
           {/* Bouton menu mobile */}
