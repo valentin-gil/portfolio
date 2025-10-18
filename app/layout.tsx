@@ -24,8 +24,8 @@ export const metadata: Metadata = {
   description: "Étudiant en BUT Métiers du Multimédia et de l'Internet",
   icons: {
     icon: [
-      { url: '/favicon.ico' },
-      { url: '/icon.png', type: 'image/png', sizes: '32x32' },
+      { url: '/favicon.ico', type: 'image/x-icon' },
+      { url: '/favicon.svg', type: 'image/svg+xml' }
     ],
     apple: [
       { url: '/apple-icon.png', sizes: '180x180', type: 'image/png' },
@@ -40,8 +40,8 @@ export const metadata: Metadata = {
     images: [
       {
         url: "/thumbnail.png",
-        width: 1200,
-        height: 630,
+        width: 1080,
+        height: 1080,
         alt: "Valentin Gil",
       },
     ],
