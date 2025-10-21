@@ -95,7 +95,7 @@ export default function MentionsLegales() {
               jamais revendues à des tiers. Le site utilise Vercel Analytics, un
               service fourni par Vercel Inc., afin de mesurer la fréquentation
               et l'utilisation du site. Les données collectées sont anonymisées
-              et ne permettent pas d'identifier directement l'utilisateur.
+              et ne permettent pas d&apos;identifier directement l&apos;utilisateur.
               Conformément au Règlement Général sur la Protection des Données
               (RGPD), vous disposez d&apos;un droit d&apos;accès, de
               rectification, d&apos;opposition et de suppression de vos données

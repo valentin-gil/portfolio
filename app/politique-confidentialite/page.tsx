@@ -135,7 +135,7 @@ export default function Confidentialite() {
                 Droit de rectification
               </li>
               <li className="before:content-['-'] before:mr-2">
-                Droit à l&apos;effacement ("droit à l&apos;oubli")
+                Droit à l&apos;effacement (&quot;droit à l&apos;oubli&quot;)
               </li>
               <li className="before:content-['-'] before:mr-2">
                 Droit d&apos;opposition
