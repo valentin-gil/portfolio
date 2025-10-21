@@ -43,13 +43,13 @@ Le site est déployé automatiquement sur Vercel à chaque push sur la branche `
 
 ## 📄 Mentions légales & RGPD
 
-- [Mentions légales](/mentions-legales)
-- [Politique de confidentialité](/politique-confidentialite)
+- [Mentions légales](https://vgil.fr/mentions-legales)
+- [Politique de confidentialité](https://vgil.fr/politique-confidentialite)
 
 ## 👤 Auteur
 
 - [Valentin Gil](https://vgil.fr)
-- [LinkedIn](https://www.linkedin.com/in/valentin-gil/)
+- [LinkedIn](https://www.linkedin.com/in/valentin-gil-12741a38a/)
 
 ---
 
