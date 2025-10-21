@@ -94,7 +94,7 @@ export default function MentionsLegales() {
               maximale de 3 ans, sauf obligation légale contraire, et ne sont
               jamais revendues à des tiers. Le site utilise Vercel Analytics, un
               service fourni par Vercel Inc., afin de mesurer la fréquentation
-              et l'utilisation du site. Les données collectées sont anonymisées
+              et l&apos;utilisation du site. Les données collectées sont anonymisées
               et ne permettent pas d&apos;identifier directement l&apos;utilisateur.
               Conformément au Règlement Général sur la Protection des Données
               (RGPD), vous disposez d&apos;un droit d&apos;accès, de
