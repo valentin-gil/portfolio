@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "next-themes";
 import { siteStructuredData } from "./seo-jsonld";
+import { Analytics } from "@vercel/analytics/next"
 
 const geist = Geist({
   variable: "--font-geist-sans",
@@ -20,7 +21,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://vgil.fr'),
-  title: "Valentin Gil",
+  title: "Valentin Gil - Portfolio",
   description: "Étudiant de 2e année en BUT Métiers du Multimédia et de l'Internet à l'IUT d'Angoulême.",
   icons: {
     icon: [
@@ -33,10 +34,10 @@ export const metadata: Metadata = {
   },
   manifest: '/site.webmanifest',
   openGraph: {
-    title: "Valentin Gil",
+    title: "Valentin Gil - Portfolio",
     description: "Étudiant de 2e année en BUT Métiers du Multimédia et de l'Internet à l'IUT d'Angoulême.",
     url: "https://vgil.fr",
-    siteName: "Valentin Gil",
+    siteName: "Valentin Gil - Portfolio",
     images: [
       {
         url: "/thumbnail.png",
@@ -50,7 +51,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary",
-    title: "Valentin Gil",
+    title: "Valentin Gil - Portfolio",
     description: "Étudiant de 2e année en BUT Métiers du Multimédia et de l'Internet à l'IUT d'Angoulême.",
     images: ["/thumbnail.png"],
   },
@@ -83,6 +84,7 @@ export default function RootLayout({
         >
           {children}
         </ThemeProvider>
+        <Analytics />
       </body>
     </html>
   );

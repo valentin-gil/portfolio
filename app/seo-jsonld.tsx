@@ -9,6 +9,7 @@ export const siteStructuredData = {
     "https://www.linkedin.com/in/valentin-gil-12741a38a/"
   ],
   "jobTitle": "Étudiant en BUT Métiers du Multimédia et de l'Internet",
+  "description": "Portfolio de Valentin Gil, étudiant en BUT MMI à l'IUT d'Angoulême",
   "worksFor": {
     "@type": "Organization",
     "name": "Valentin Gil"
