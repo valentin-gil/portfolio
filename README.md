@@ -3,7 +3,7 @@
 
 Bienvenue sur le portfolio de Valentin Gil, étudiant en BUT Métiers du Multimédia et de l'Internet à l'IUT d'Angoulême.
 
-![Aperçu du site](public/thumbnail.png)
+<img src="public/preview.png" alt="Aperçu du site" width="500" style="margin-bottom: 1rem;" />
 
 ## 🚀 Aperçu
 
