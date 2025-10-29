@@ -49,7 +49,7 @@ Le site est déployé automatiquement sur Vercel à chaque push sur la branche `
 ## 👤 Auteur
 
 - [Valentin Gil](https://vgil.fr)
-- [LinkedIn](https://www.linkedin.com/in/valentin-gil-12741a38a/)
+- [LinkedIn](https://www.linkedin.com/in/valentin-gil/)
 
 ---
 
