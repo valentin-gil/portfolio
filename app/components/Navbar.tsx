@@ -82,7 +82,7 @@ export default function Navbar() {
                       <div className="absolute top-0 left-0 translate-y-[125%] skew-y-8 transition duration-500 group-hover:translate-y-0 group-hover:skew-y-0">Accueil</div>
                     </li>
                   </Link>
-                  <Link href="/#about" className="relative overflow-hidden px-4 py-2 rounded-full text-sm font-medium text-gray-700 dark:text-gray-200 transition-all duration-300 group">
+                  <Link href="/#a-propos" className="relative overflow-hidden px-4 py-2 rounded-full text-sm font-medium text-gray-700 dark:text-gray-200 transition-all duration-300 group">
                     <li className="group overflow-hidden relative whitespace-nowrap">
                       <div className="translate-y-0 skew-y-0 transition duration-500 group-hover:-translate-y-[125%] group-hover:skew-y-8">À propos</div>
                       <div className="absolute top-0 left-0 translate-y-[125%] skew-y-8 transition duration-500 group-hover:translate-y-0 group-hover:skew-y-0">À propos</div>
@@ -109,7 +109,7 @@ export default function Navbar() {
                       <div className="absolute top-0 left-0 translate-y-[125%] skew-y-8 transition duration-500 group-hover:translate-y-0 group-hover:skew-y-0">Accueil</div>
                     </li>
                   </a>
-                  <a href="#about" onClick={(e) => { e.preventDefault(); document.querySelector('#about')?.scrollIntoView({ behavior: 'smooth' }); }} className="relative overflow-hidden px-4 py-2 rounded-full text-sm font-medium text-gray-700 dark:text-gray-200 transition-all duration-300 group">
+                  <a href="#a-propos" onClick={(e) => { e.preventDefault(); document.querySelector('#a-propos')?.scrollIntoView({ behavior: 'smooth' }); }} className="relative overflow-hidden px-4 py-2 rounded-full text-sm font-medium text-gray-700 dark:text-gray-200 transition-all duration-300 group">
                     <li className="group overflow-hidden relative whitespace-nowrap">
                       <div className="translate-y-0 skew-y-0 transition duration-500 group-hover:-translate-y-[125%] group-hover:skew-y-8">À propos</div>
                       <div className="absolute top-0 left-0 translate-y-[125%] skew-y-8 transition duration-500 group-hover:translate-y-0 group-hover:skew-y-0">À propos</div>
@@ -188,7 +188,7 @@ export default function Navbar() {
                 </li>
                 <li role="none" className="animate-fade-in-delay-2">
                   <Link
-                    href="/#about" 
+                    href="/#a-propos" 
                     className="text-3xl font-bold text-gray-900 dark:text-white hover:text-gray-600 dark:hover:text-gray-300 transition-all duration-300 hover:scale-110 inline-block" 
                     role="menuitem"
                   >
@@ -228,7 +228,7 @@ export default function Navbar() {
                 </li>
                 <li role="none" className="animate-fade-in-delay-2">
                   <a 
-                    href="#about" 
+                    href="#a-propos" 
                     onClick={handleLinkClick}
                     className="text-3xl font-bold text-gray-900 dark:text-white hover:text-gray-600 dark:hover:text-gray-300 transition-all duration-300 hover:scale-110 inline-block" 
                     role="menuitem"

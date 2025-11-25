@@ -225,11 +225,34 @@ export default function Home() {
                 Valentin Gil
               </h1>
             </div>
+
+            {/* Flèche de scroll */}
+            <a
+              href="#a-propos"
+              onClick={(e) => { e.preventDefault(); document.querySelector('#a-propos')?.scrollIntoView({ behavior: 'smooth' }); }}
+              className="absolute bottom-12 left-1/2 -translate-x-1/2 group"
+              aria-label="Descendre vers la section À Propos"
+            >
+              <svg
+                className="w-6 h-6 text-gray-900 dark:text-white opacity-60 group-hover:opacity-100 transition-all duration-300 ease-out group-hover:translate-y-1"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </a>
           </div>
         </div>
 
         {/* Section À propos */}
-        <section id="about" className="py-32 bg-white dark:bg-[#121212]">
+        <section id="a-propos" className="py-32 bg-white dark:bg-[#121212]">
           <div className="max-w-7xl mx-auto px-6 sm:px-12">
             {/* Titre et barre */}
             <div className="mb-16 sm:mb-20">
@@ -424,9 +447,9 @@ export default function Home() {
                     </div>
                     <div>
                       <h3 className="text-2xl font-bold text-[#191919] dark:text-white mb-1">Valentin Gil</h3>
-                      <span className="inline-flex items-center gap-2 px-3 py-1 bg-green-100 dark:bg-green-900/30 border border-green-600 dark:border-green-500 rounded-full text-sm font-medium text-green-700 dark:text-green-400">
-                        <span className="w-2 h-2 bg-green-600 dark:bg-green-500 rounded-full"></span>
-                        Disponible
+                      <span className="inline-flex items-center gap-2 px-3 py-1.5 bg-green-100 dark:bg-green-900/30 border border-green-600 dark:border-green-500 rounded-full text-sm font-medium text-green-700 dark:text-green-400 leading-none">
+                        <span className="w-2 h-2 bg-green-600 dark:bg-green-500 rounded-full animate-pulse"></span>
+                        <span className="translate-y-[-1px]">Disponible</span>
                       </span>
                     </div>
                   </div>

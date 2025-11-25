@@ -4,7 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 export default function Footer() {
-  
+
   const pathname = usePathname();
   const isLegalPage = pathname !== "/";
 
@@ -37,7 +37,7 @@ export default function Footer() {
                   </li>
                   <li>
                     <Link 
-                      href="/#about" 
+                      href="/#a-propos" 
                       className="text-sm sm:text-base text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white transition-colors"
                     >
                       À propos
@@ -73,8 +73,8 @@ export default function Footer() {
                   </li>
                   <li>
                     <a 
-                      href="#about" 
-                      onClick={(e) => { e.preventDefault(); document.querySelector('#about')?.scrollIntoView({ behavior: 'smooth' }); }}
+                      href="#a-propos" 
+                      onClick={(e) => { e.preventDefault(); document.querySelector('#a-propos')?.scrollIntoView({ behavior: 'smooth' }); }}
                       className="text-sm sm:text-base text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white transition-colors"
                     >
                       À propos
