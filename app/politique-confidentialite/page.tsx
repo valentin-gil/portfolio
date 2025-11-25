@@ -3,7 +3,7 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
 export const metadata: Metadata = {
-  title: "Politique de Confidentialité",
+  title: "Politique de Confidentialité - Valentin Gil",
   description:
     "Politique de confidentialité et traitement des données personnelles sur vgil.fr",
 };

@@ -3,7 +3,7 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
 export const metadata: Metadata = {
-  title: "Mentions Légales",
+  title: "Mentions Légales - Valentin Gil",
   description: "Mentions légales et informations légales du site vgil.fr",
 };
 
