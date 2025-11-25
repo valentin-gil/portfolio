@@ -347,7 +347,7 @@ export default function Home() {
                     className="w-full h-full object-cover object-top"
                   />
                   {/* Tag crédit photo */}
-                  <div className="absolute bottom-3 left-3 px-3 py-1.5 bg-black/70 dark:bg-white/80 backdrop-blur-sm rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <div className="absolute bottom-3 left-3 px-3 py-1.5 bg-black/70 dark:bg-white/80 backdrop-blur-sm rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300">
                     <p className="text-xs text-white dark:text-black font-medium">
                       📸 Arthur Binchet
                     </p>
