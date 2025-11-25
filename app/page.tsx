@@ -92,7 +92,7 @@ export default function Home() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="bg-white dark:bg-[#23272f] rounded-xl shadow p-6">
                 <h3 className="text-xl font-semibold mb-2">Portfolio</h3>
-                <p className="text-gray-700 dark:text-gray-300">Ce site, développé avec Next.js 15, Tailwind CSS 4 et animations Three.js. Optimisé pour la performance, l'accessibilité et le SEO.</p>
+                <p className="text-gray-700 dark:text-gray-300">Ce site, développé avec Next.js 15, Tailwind CSS 4 et animations Three.js. Optimisé pour la performance, l&apos;accessibilité et le SEO.</p>
               </div>
               <div className="bg-white dark:bg-[#23272f] rounded-xl shadow p-6">
                 <h3 className="text-xl font-semibold mb-2">Projet fictif</h3>
