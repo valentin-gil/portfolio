@@ -693,39 +693,41 @@ export default function Home() {
                     className="w-full px-4 py-3 border border-gray-300 dark:border-gray-700 rounded-lg bg-white dark:bg-[#1a1a1a] text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#191919] dark:focus:ring-white transition-shadow resize-none"
                   ></textarea>
 
-                  {submitStatus === "success" && (
-                    <p className="text-green-600 dark:text-green-400 text-sm">
-                      {t.contact.form.success}
-                    </p>
-                  )}
-                  {submitStatus === "error" && (
-                    <p className="text-red-600 dark:text-red-400 text-sm">
-                      {t.contact.form.error}
-                    </p>
-                  )}
-
-                  <button
-                    type="submit"
-                    disabled={isSubmitting}
-                    className="inline-flex items-center gap-2 px-6 py-3 bg-[#191919] dark:bg-white text-white dark:text-[#191919] rounded-lg font-semibold hover:opacity-90 transition-opacity disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer"
-                  >
-                    <span className="translate-y-[-1px]">
-                      {isSubmitting ? t.contact.form.sending : t.contact.form.send}
-                    </span>
-                    <svg
-                      className="w-5 h-5"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
+                  <div className="flex items-center gap-4">
+                    <button
+                      type="submit"
+                      disabled={isSubmitting}
+                      className="inline-flex items-center gap-2 px-6 py-3 bg-[#191919] dark:bg-white text-white dark:text-[#191919] rounded-lg font-semibold hover:opacity-90 transition-opacity disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer"
                     >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M14 5l7 7m0 0l-7 7m7-7H3"
-                      />
-                    </svg>
-                  </button>
+                      <span className="translate-y-[-1px]">
+                        {isSubmitting ? t.contact.form.sending : t.contact.form.send}
+                      </span>
+                      <svg
+                        className="w-5 h-5"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M14 5l7 7m0 0l-7 7m7-7H3"
+                        />
+                      </svg>
+                    </button>
+
+                    {submitStatus === "success" && (
+                      <p className="text-green-600 dark:text-green-400 text-sm font-medium">
+                        {t.contact.form.success}
+                      </p>
+                    )}
+                    {submitStatus === "error" && (
+                      <p className="text-red-600 dark:text-red-400 text-sm font-medium">
+                        {t.contact.form.error}
+                      </p>
+                    )}
+                  </div>
                 </form>
               </div>
             </div>

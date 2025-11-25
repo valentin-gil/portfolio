@@ -47,12 +47,107 @@ Message:
 ${message}
       `,
       html: `
-        <h2>Nouveau message depuis le portfolio</h2>
-        <p><strong>Nom:</strong> ${nom}</p>
-        <p><strong>Prénom:</strong> ${prenom}</p>
-        <p><strong>Email:</strong> ${email}</p>
-        <h3>Message:</h3>
-        <p>${message.replace(/\n/g, '<br>')}</p>
+        <!DOCTYPE html>
+        <html lang="fr">
+        <head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Nouveau message</title>
+        </head>
+        <body style="margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; background-color: #070707;">
+          <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background-color: #070707; padding: 40px 20px;">
+            <tr>
+              <td align="center">
+                <table role="presentation" width="600" cellpadding="0" cellspacing="0" style="background-color: #121212; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);">
+                  
+                  <!-- Content -->
+                  <tr>
+                    <td style="padding: 48px 40px 40px 40px;">
+                      
+                      <!-- Logo VG -->
+                      <div style="text-align: center; margin-bottom: 40px;">
+                        <img src="https://vgil.fr/vg.png" alt="Logo VG" style="width: 120px; height: auto;" />
+                      </div>
+
+                      <!-- Titre avec barre -->
+                      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin-bottom: 32px;">
+                        <tr>
+                          <td style="vertical-align: bottom; padding-bottom: 8px;">
+                            <h1 style="margin: 0; color: #ffffff; font-size: 42px; font-weight: 700; white-space: nowrap; letter-spacing: -0.5px;">
+                              Nouveau message
+                            </h1>
+                          </td>
+                          <td style="width: 100%; vertical-align: bottom; padding-bottom: 12px; padding-left: 24px;">
+                            <div style="height: 3px; background: rgba(255, 255, 255, 0.3); width: 100%;"></div>
+                          </td>
+                        </tr>
+                      </table>
+
+                      <!-- Informations expéditeur -->
+                      <div style="background-color: #1a1a1a; padding: 24px; border-radius: 12px; margin-bottom: 30px;">
+                        <div style="display: flex; align-items: center; gap: 24px;">
+                          <!-- Photo de profil placeholder -->
+                          <div style="width: 80px; height: 80px; border-radius: 50%; background: linear-gradient(135deg, #2a2a2a 0%, #3a3a3a 100%); flex-shrink: 0;"></div>
+                          
+                          <!-- Informations -->
+                          <div style="flex: 1;">
+                            <h2 style="margin: 0 0 8px 0; color: #ffffff; font-size: 24px; font-weight: 700; letter-spacing: -0.5px;">
+                              ${prenom} ${nom}
+                            </h2>
+                            <div style="display: inline-flex; align-items: center; gap: 8px; padding: 6px 12px; background-color: rgba(255, 255, 255, 0.1); border-radius: 20px;">
+                              <svg width="16" height="16" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg" style="flex-shrink: 0;">
+                                <path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48L48 64zM0 176L0 384c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-208L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z" fill="#d0d0d0"/>
+                              </svg>
+                              <a href="mailto:${email}" style="color: #d0d0d0; font-size: 14px; font-weight: 500; text-decoration: none;">
+                                ${email}
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- Message -->
+                      <div style="margin-bottom: 30px;">
+                        <h2 style="margin: 0 0 16px 0; color: #ffffff; font-size: 18px; font-weight: 600;">
+                          Message
+                        </h2>
+                        <div style="background-color: #1a1a1a; padding: 20px; border-radius: 8px; color: #d0d0d0; font-size: 15px; line-height: 1.6;">
+                          ${message.replace(/\n/g, '<br>')}
+                        </div>
+                      </div>
+
+                      <!-- Bouton de réponse -->
+                      <div style="text-align: center; margin-top: 32px;">
+                        <a href="mailto:${email}" style="display: inline-flex; align-items: center; gap: 8px; background-color: #ffffff; color: #191919; padding: 14px 32px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 15px;">
+                          <span style="transform: translateY(-1px); display: inline-block;">Répondre au message</span>
+                          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0;">
+                            <path d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                          </svg>
+                        </a>
+                      </div>
+
+                    </td>
+                  </tr>
+
+                  <!-- Footer -->
+                  <tr>
+                    <td style="background-color: #0f0f0f; padding: 24px 40px; text-align: center; border-top: 1px solid #2a2a2a;">
+                      <p style="margin: 0; color: #999999; font-size: 13px; line-height: 1.5;">
+                        Ce message a été envoyé depuis le formulaire de contact de 
+                        <a href="https://vgil.fr" style="color: #ffffff; text-decoration: none; font-weight: 600;">vgil.fr</a>
+                      </p>
+                      <p style="margin: 8px 0 0 0; color: #666666; font-size: 12px;">
+                        © ${new Date().getFullYear()} Valentin Gil. Tous droits réservés.
+                      </p>
+                    </td>
+                  </tr>
+
+                </table>
+              </td>
+            </tr>
+          </table>
+        </body>
+        </html>
       `,
     };
 
