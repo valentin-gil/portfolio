@@ -59,11 +59,11 @@ export default function Navbar() {
           <div className="flex-shrink-0">
             {isLegalPage ? (
             <Link href="/" className="flex items-center" aria-label="Retour à l'accueil">
-              <Logo className="h-7" />
+              <Logo className="h-8 w-auto" />
             </Link>
             ) : (
               <a href="#" onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: "smooth" }); }} className="flex items-center" aria-label="Retour à l'accueil">
-                <Logo className="h-7" />
+                <Logo className="h-8 w-auto" />
               </a>
             )}
           </div>
