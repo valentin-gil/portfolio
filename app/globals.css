@@ -2,6 +2,22 @@
 
 @custom-variant dark (&:is(.dark *));
 
+@font-face {
+  font-family: 'Vastago Grotesk';
+  src: url('/fonts/vastago-grotesk/VastagoGrotesk-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Vastago Grotesk';
+  src: url('/fonts/vastago-grotesk/VastagoGrotesk-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -122,4 +138,116 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+/* Animations pour le menu mobile */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes slide-up {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-down {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.3s ease-out;
+}
+
+.animate-fade-out {
+  animation: fade-out 0.3s ease-out;
+}
+
+.animate-slide-up {
+  animation: slide-up 0.4s ease-out;
+}
+
+.animate-slide-down {
+  animation: slide-down 0.3s ease-out;
+}
+
+.animate-fade-in-delay-1 {
+  animation: slide-up 0.4s ease-out 0.1s backwards;
+}
+
+.animate-fade-in-delay-2 {
+  animation: slide-up 0.4s ease-out 0.2s backwards;
+}
+
+.animate-fade-in-delay-3 {
+  animation: slide-up 0.4s ease-out 0.3s backwards;
+}
+
+.animate-fade-in-delay-4 {
+  animation: slide-up 0.4s ease-out 0.4s backwards;
+}
+
+/* Animation de transition de thème */
+@keyframes in-circle-swoop {
+  from {
+    clip-path: circle(0% at 100% 0%);
+  }
+  to {
+    clip-path: circle(150% at 100% 0%);
+  }
+}
+
+html::view-transition-old(root),
+html::view-transition-new(root) {
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in-out;
+}
+
+html::view-transition-old(root) {
+  animation-name: none;
+}
+
+html::view-transition-new(root) {
+  animation-name: in-circle-swoop;
+}
+
+/* Exclure le ModeToggle de la view transition pour qu'il puisse s'animer indépendamment */
+.themeToggle,
+.st-sunMoonThemeToggleBtn,
+.st-sunMoonThemeToggleBtn *,
+.themeToggleInput,
+svg,
+.sunMoon,
+.sunRay {
+  view-transition-name: none !important;
+}
+
+[transition-style="in:custom:circle-swoop"] {
+  animation: 0.5s ease-in-out in-circle-swoop;
 }

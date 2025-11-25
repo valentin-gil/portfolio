@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Playfair_Display, Dancing_Script } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "next-themes";
 import { siteStructuredData } from "./seo-jsonld";
@@ -18,6 +18,20 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
   display: "swap",
   preload: false, // Chargement différé pour la police mono
+});
+
+const playfair = Playfair_Display({
+  variable: "--font-playfair",
+  subsets: ["latin"],
+  display: "swap",
+  preload: true,
+});
+
+const dancingScript = Dancing_Script({
+  variable: "--font-dancing-script",
+  subsets: ["latin"],
+  display: "swap",
+  preload: true,
 });
 
 export const metadata: Metadata = {
@@ -76,12 +90,11 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(siteStructuredData) }}
         />
       </head>
-      <body className={`${geist.variable} ${geistMono.variable} antialiased`}>
+      <body className={`${geist.variable} ${geistMono.variable} ${playfair.variable} ${dancingScript.variable} antialiased`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
           enableSystem={false}
-          disableTransitionOnChange
         >
           {children}
         </ThemeProvider>
