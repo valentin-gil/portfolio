@@ -104,9 +104,13 @@ export default function NotFound() {
               {/* SVG pour mobile */}
               <svg className="absolute top-10 left-1/2 -translate-x-1/2 -z-10 h-[9rem] md:hidden" viewBox="0 0 400 150" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                 <defs>
-                  <linearGradient id="strokeGradient404Mobile" x1="0%" y1="0%" x2="0%" y2="100%">
-                    <stop offset="60%" stopColor="currentColor" stopOpacity="0" />
-                    <stop offset="100%" stopColor="currentColor" stopOpacity="1" />
+                  <linearGradient id="strokeGradient404MobileLight" x1="0%" y1="0%" x2="0%" y2="100%">
+                    <stop offset="60%" stopColor="#191919" stopOpacity="0" />
+                    <stop offset="100%" stopColor="#191919" stopOpacity="1" />
+                  </linearGradient>
+                  <linearGradient id="strokeGradient404MobileDark" x1="0%" y1="0%" x2="0%" y2="100%">
+                    <stop offset="60%" stopColor="#ffffff" stopOpacity="0" />
+                    <stop offset="100%" stopColor="#ffffff" stopOpacity="1" />
                   </linearGradient>
                 </defs>
                 <text 
@@ -114,8 +118,7 @@ export default function NotFound() {
                   y="50%" 
                   dominantBaseline="middle" 
                   textAnchor="middle" 
-                  className="font-bold fill-transparent"
-                  stroke="url(#strokeGradient404Mobile)" 
+                  className="font-bold fill-transparent [stroke:url(#strokeGradient404MobileLight)] dark:[stroke:url(#strokeGradient404MobileDark)]"
                   strokeWidth="2"
                   style={{ fontSize: '133px', fontFamily: 'inherit' }}
                 >

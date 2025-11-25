@@ -102,11 +102,15 @@ export default function Home() {
           >
             <div className="relative mb-8">
               {/* SVG pour mobile */}
-              <svg className="absolute top-3 left-1/2 -translate-x-1/2 -z-10 h-[6rem] md:hidden" viewBox="0 0 600 150" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <svg className="absolute top-3 left-1/2 -translate-x-1/2 -z-10 h-[6rem] w-auto max-w-[95vw] md:hidden" viewBox="0 0 600 150" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                 <defs>
-                  <linearGradient id="strokeGradientMobile" x1="0%" y1="0%" x2="0%" y2="100%">
-                    <stop offset="60%" stopColor="currentColor" stopOpacity="0" />
-                    <stop offset="100%" stopColor="currentColor" stopOpacity="1" />
+                  <linearGradient id="strokeGradientMobileLight" x1="0%" y1="0%" x2="0%" y2="100%">
+                    <stop offset="60%" stopColor="#191919" stopOpacity="0" />
+                    <stop offset="100%" stopColor="#191919" stopOpacity="1" />
+                  </linearGradient>
+                  <linearGradient id="strokeGradientMobileDark" x1="0%" y1="0%" x2="0%" y2="100%">
+                    <stop offset="60%" stopColor="#ffffff" stopOpacity="0" />
+                    <stop offset="100%" stopColor="#ffffff" stopOpacity="1" />
                   </linearGradient>
                 </defs>
                 <text 
@@ -114,8 +118,7 @@ export default function Home() {
                   y="50%" 
                   dominantBaseline="middle" 
                   textAnchor="middle" 
-                  className="font-bold fill-transparent"
-                  stroke="url(#strokeGradientMobile)" 
+                  className="font-bold fill-transparent [stroke:url(#strokeGradientMobileLight)] dark:[stroke:url(#strokeGradientMobileDark)]"
                   strokeWidth="2"
                   style={{ fontSize: '94px', fontFamily: 'inherit' }}
                 >
