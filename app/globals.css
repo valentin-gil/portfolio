@@ -43,6 +43,7 @@
   
   /* Custom colors */
   --color-gray-900: #191919;
+  --color-gray-750: #303030;
   --color-gray-700: #404040;
   --color-gray-600: #525252;
 }
@@ -239,4 +240,16 @@ svg,
 
 [transition-style="in:custom:circle-swoop"] {
   animation: 0.5s ease-in-out in-circle-swoop;
+}
+
+/* Animation ping personnalisée pour le cercle disponible */
+@keyframes ping-visible {
+  75%, 100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+.animate-ping-visible {
+  animation: ping-visible 1.5s cubic-bezier(0, 0, 0.2, 1) infinite;
 }

@@ -9,7 +9,7 @@ export default function Footer() {
   const isLegalPage = pathname !== "/";
 
   return (
-    <footer className="bg-gray-50 dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800">
+    <footer className="bg-gray-50 dark:bg-gray-900 border-t border-gray-200 dark:border-gray-750">
       <div className="max-w-7xl mx-auto px-6 sm:px-6 py-10 sm:py-12">
         {/* Trois colonnes */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 mb-6 sm:mb-8">
@@ -163,7 +163,7 @@ export default function Footer() {
         </div>
 
         {/* Séparateur */}
-        <div className="border-t border-gray-200 dark:border-gray-800 mb-6"></div>
+        <div className="border-t border-gray-200 dark:border-gray-750 mb-6"></div>
 
         {/* Copyright et liens légaux */}
         <div className="flex flex-col md:flex-row justify-between items-center gap-3 sm:gap-4 text-center md:text-left">
