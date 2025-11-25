@@ -1,3 +1,7 @@
+"use client";
+
+import { useLanguage } from "@/lib/useLanguage";
+
 interface ProjectCardProps {
   images: string[];
   title: string;
@@ -17,6 +21,7 @@ export default function ProjectCard({
   isVideo = false,
   siteUrl,
 }: ProjectCardProps) {
+  const { t } = useLanguage();
   const renderMedia = () => {
     if (isVideo && images.length === 1) {
       return (
@@ -108,7 +113,7 @@ export default function ProjectCard({
         <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/60 backdrop-blur-sm">
           <div className="text-white text-center">
             <span className="text-xl font-bold flex items-center gap-2">
-              Accéder au site
+              {t.projects.seeProject}
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"

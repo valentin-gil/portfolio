@@ -6,8 +6,11 @@ import Footer from "./components/Footer";
 import { ThemeProvider } from "./components/theme-provider";
 import LazyBeams from "./components/LazyBeams";
 import ProjectCard from "./components/ProjectCard";
+import { useLanguage } from "@/lib/useLanguage";
 
 export default function Home() {
+  const { t } = useLanguage();
+  
   const [formData, setFormData] = useState({
     nom: "",
     prenom: "",
@@ -289,15 +292,15 @@ export default function Home() {
 
             {/* Flèche de scroll */}
             <a
-              href="#a-propos"
+              href={`#${t.sections.about}`}
               onClick={(e) => {
                 e.preventDefault();
                 document
-                  .querySelector("#a-propos")
+                  .querySelector(`#${t.sections.about}`)
                   ?.scrollIntoView({ behavior: "smooth" });
               }}
               className="absolute bottom-12 left-1/2 -translate-x-1/2 group"
-              aria-label="Descendre vers la section À Propos"
+              aria-label="Scroll"
             >
               <svg
                 className="w-6 h-6 text-gray-900 dark:text-white opacity-60 group-hover:opacity-100 transition-all duration-300 ease-out group-hover:translate-y-1"
@@ -319,7 +322,7 @@ export default function Home() {
 
         {/* Section À propos */}
         <section
-          id="a-propos"
+          id={t.sections.about}
           className="pt-32 pb-8 bg-gray-50 dark:bg-[#121212]"
         >
           <div className="max-w-7xl mx-auto px-6 sm:px-12">
@@ -327,7 +330,7 @@ export default function Home() {
             <div className="mb-16 sm:mb-20">
               <div className="flex items-end gap-6 sm:gap-8">
                 <h2 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-gray-900 dark:text-white whitespace-nowrap">
-                  À Propos
+                  {t.about.title}
                 </h2>
                 <div className="h-[3px] w-full bg-gray-900/30 dark:bg-white/30 mb-2"></div>
               </div>
@@ -377,31 +380,28 @@ export default function Home() {
                         clipRule="evenodd"
                       />
                     </svg>
-                    Angoulême
+                    {t.about.tags.location}
                   </span>
                   <span className="px-3 sm:px-4 py-1.5 sm:py-2 bg-[#e5e5e5]/80 dark:bg-[#2a2a2a]/80 rounded-full text-xs sm:text-sm font-medium text-[#191919] dark:text-white transition-colors">
-                    Développement Web
+                    {t.about.tags.webDev}
                   </span>
                   <span className="px-3 sm:px-4 py-1.5 sm:py-2 bg-[#e5e5e5]/80 dark:bg-[#2a2a2a]/80 rounded-full text-xs sm:text-sm font-medium text-[#191919] dark:text-white transition-colors">
-                    Web Design
+                    {t.about.tags.webDesign}
                   </span>
                   <span className="px-3 sm:px-4 py-1.5 sm:py-2 bg-[#e5e5e5]/80 dark:bg-[#2a2a2a]/80 rounded-full text-xs sm:text-sm font-medium text-[#191919] dark:text-white transition-colors">
-                    UX/UI
+                    {t.about.tags.uxUi}
                   </span>
                 </div>
 
                 {/* Description */}
                 <p className="text-base sm:text-lg text-gray-700 dark:text-gray-300 max-w-3xl leading-relaxed mb-12">
-                  Étudiant en BUT MMI, c&apos;est au cours de ma première année
-                  que je me suis découvert une passion pour le développement web
-                  et le design. Aujourd&apos;hui, je conçois des interfaces
-                  modernes et performantes, du wireframe au produit final.
+                  {t.about.description}
                 </p>
 
                 {/* Parcours */}
                 <div className="mb-8">
                   <h5 className="text-2xl sm:text-3xl font-bold mb-6 text-[#191919] dark:text-white">
-                    Mon parcours
+                    {t.about.education.title}
                   </h5>
                   <div className="relative space-y-6">
                     {/* Ligne de progression à gauche - partie complétée en blanc depuis le bas */}
@@ -419,14 +419,14 @@ export default function Home() {
                       <div className="flex items-start justify-between gap-2">
                         <div className="flex-1 min-w-0">
                           <h6 className="text-lg font-bold text-[#191919] dark:text-white uppercase">
-                            IUT D&apos;Angoulême
+                            {t.about.education.iut.location}
                           </h6>
                           <p className="text-base font-medium text-gray-700 dark:text-gray-300">
-                            BUT Métiers du Multimédia et de l&apos;Internet
+                            {t.about.education.iut.degree}
                           </p>
                         </div>
                         <span className="text-sm italic text-gray-600 dark:text-gray-400 whitespace-nowrap flex-shrink-0">
-                          2024 - 2027
+                          {t.about.education.iut.date}
                         </span>
                       </div>
                     </div>
@@ -438,14 +438,14 @@ export default function Home() {
                       <div className="flex items-start justify-between gap-2">
                         <div className="flex-1 min-w-0">
                           <h6 className="text-lg font-bold text-[#191919] dark:text-white uppercase">
-                            Epitech Technology - Bordeaux
+                            {t.about.education.epitech.location}
                           </h6>
                           <p className="text-base font-medium text-gray-700 dark:text-gray-300">
-                            Ingénierie logicielle
+                            {t.about.education.epitech.degree}
                           </p>
                         </div>
                         <span className="text-sm italic text-gray-600 dark:text-gray-400 whitespace-nowrap flex-shrink-0">
-                          2023 - 2024
+                          {t.about.education.epitech.date}
                         </span>
                       </div>
                     </div>
@@ -457,14 +457,14 @@ export default function Home() {
                       <div className="flex items-start justify-between gap-2">
                         <div className="flex-1 min-w-0">
                           <h6 className="text-lg font-bold text-[#191919] dark:text-white uppercase">
-                            Lycée Les Iris - Lormont
+                            {t.about.education.highschool.location}
                           </h6>
                           <p className="text-base font-medium text-gray-700 dark:text-gray-300">
-                            Baccalauréat général obtenu
+                            {t.about.education.highschool.degree}
                           </p>
                         </div>
                         <span className="text-sm italic text-gray-600 dark:text-gray-400 whitespace-nowrap flex-shrink-0">
-                          Juillet 2023
+                          {t.about.education.highschool.date}
                         </span>
                       </div>
                     </div>
@@ -474,12 +474,12 @@ export default function Home() {
                 {/* Bouton CV */}
                 <div className="flex justify-center lg:justify-start">
                   <a
-                    href="/assets/GIL_Valentin_CV.pdf"
+                    href={t.about.cvLink}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 px-6 py-3 bg-[#191919] dark:bg-white text-white dark:text-[#191919] rounded-lg text-base font-semibold hover:opacity-80 transition-opacity duration-300"
                   >
-                    Voir mon CV
+                    {t.about.viewCV}
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="24"
@@ -505,7 +505,7 @@ export default function Home() {
 
         {/* Section Projets */}
         <section
-          id="projets"
+          id={t.sections.projects}
           className="pt-32 pb-8 bg-gray-50 dark:bg-[#121212]"
         >
           <div className="max-w-7xl mx-auto px-6 sm:px-12">
@@ -513,7 +513,7 @@ export default function Home() {
             <div className="mb-16 sm:mb-20">
               <div className="flex items-end gap-6 sm:gap-8">
                 <h2 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-gray-900 dark:text-white whitespace-nowrap">
-                  Projets
+                  {t.projects.title}
                 </h2>
                 <div className="h-[3px] w-full bg-gray-900/30 dark:bg-white/30 mb-2"></div>
               </div>
@@ -527,8 +527,8 @@ export default function Home() {
                   "/mmi-planning-3.png",
                 ]}
                 title="MMI Planning"
-                description="Application web pour consulter son emploi du temps et ceux des autres groupes d'élèves, actualisé en temps réel avec possibilité de partager les cours entre utilisateurs."
-                date="08/09/2025"
+                description={t.projects.mmiPlanning.description}
+                date={t.projects.mmiPlanning.date}
                 tags={["React", "TypeScript", "Vite"]}
                 siteUrl="https://mmi-planning.vgil.fr/"
               />
@@ -539,8 +539,8 @@ export default function Home() {
                   "/cineroule-3.png",
                 ]}
                 title="Cineroule"
-                description="Site web interactif permettant aux utilisateurs de voter pour leurs designs d'affiches de films préférés. Interface intuitive avec système de vote en temps réel et options d'accessibilité."
-                date="14/06/2025"
+                description={t.projects.cineroule.description}
+                date={t.projects.cineroule.date}
                 tags={["PHP", "CSS", "JS"]}
                 siteUrl="https://vgil.alwaysdata.net/s2-cine-itinerant"
               />
@@ -550,7 +550,7 @@ export default function Home() {
 
         {/* Section Contact */}
         <section
-          id="contact"
+          id={t.sections.contact}
           className="pt-32 pb-24 bg-gray-50 dark:bg-[#121212]"
         >
           <div className="max-w-7xl mx-auto px-6 sm:px-12">
@@ -558,7 +558,7 @@ export default function Home() {
             <div className="mb-16 sm:mb-20">
               <div className="flex items-end gap-6 sm:gap-8">
                 <h2 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-gray-900 dark:text-white whitespace-nowrap">
-                  Contact
+                  {t.contact.title}
                 </h2>
                 <div className="h-[3px] w-full bg-gray-900/30 dark:bg-white/30 mb-2"></div>
               </div>
@@ -585,7 +585,7 @@ export default function Home() {
                           <span className="w-2 h-2 bg-green-600 dark:bg-green-500 rounded-full"></span>
                           <span className="absolute top-0 left-0 w-2 h-2 bg-green-600 dark:bg-green-500 rounded-full animate-ping-visible"></span>
                         </span>
-                        <span className="translate-y-[-1px]">Disponible</span>
+                        <span className="translate-y-[-1px]">{t.contact.infos.available}</span>
                       </span>
                     </div>
                   </div>
@@ -593,7 +593,7 @@ export default function Home() {
 
                 <div className="mb-3">
                   <h4 className="text-lg font-semibold text-[#191919] dark:text-white mb-4">
-                    Liens utiles :
+                    {t.contact.infos.usefulLinks}
                   </h4>
                   <div className="flex flex-wrap gap-2">
                     <a
@@ -651,14 +651,14 @@ export default function Home() {
               {/* Colonne droite - Formulaire */}
               <div className="lg:col-span-2">
                 <h3 className="text-[2rem] font-semibold text-[#191919] dark:text-white mb-4">
-                  Me contacter
+                  {t.contact.title}
                 </h3>
                 <form onSubmit={handleSubmit} className="space-y-2">
                   <div className="grid grid-cols-2 gap-2">
                     <input
                       type="text"
                       name="nom"
-                      placeholder="Nom"
+                      placeholder={t.contact.form.lastName}
                       value={formData.nom}
                       onChange={handleChange}
                       required
@@ -667,7 +667,7 @@ export default function Home() {
                     <input
                       type="text"
                       name="prenom"
-                      placeholder="Prénom"
+                      placeholder={t.contact.form.firstName}
                       value={formData.prenom}
                       onChange={handleChange}
                       required
@@ -677,30 +677,30 @@ export default function Home() {
                   <input
                     type="email"
                     name="email"
-                    placeholder="Email"
+                    placeholder={t.contact.form.email}
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 border border-gray-300 dark:border-gray-700 rounded-lg bg-gray-50 dark:bg-[#1a1a1a] text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#191919] dark:focus:ring-white transition-shadow"
+                    className="w-full px-4 py-3 border border-gray-300 dark:border-gray-700 rounded-lg bg-white dark:bg-[#1a1a1a] text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#191919] dark:focus:ring-white transition-shadow"
                   />
                   <textarea
                     name="message"
-                    placeholder="Message"
+                    placeholder={t.contact.form.message}
                     rows={6}
                     value={formData.message}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 border border-gray-300 dark:border-gray-700 rounded-lg bg-gray-50 dark:bg-[#1a1a1a] text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#191919] dark:focus:ring-white transition-shadow resize-none"
+                    className="w-full px-4 py-3 border border-gray-300 dark:border-gray-700 rounded-lg bg-white dark:bg-[#1a1a1a] text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#191919] dark:focus:ring-white transition-shadow resize-none"
                   ></textarea>
 
                   {submitStatus === "success" && (
                     <p className="text-green-600 dark:text-green-400 text-sm">
-                      Message envoyé avec succès !
+                      {t.contact.form.success}
                     </p>
                   )}
                   {submitStatus === "error" && (
                     <p className="text-red-600 dark:text-red-400 text-sm">
-                      Erreur lors de l&apos;envoi. Veuillez réessayer.
+                      {t.contact.form.error}
                     </p>
                   )}
 
@@ -710,7 +710,7 @@ export default function Home() {
                     className="inline-flex items-center gap-2 px-6 py-3 bg-[#191919] dark:bg-white text-white dark:text-[#191919] rounded-lg font-semibold hover:opacity-90 transition-opacity disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer"
                   >
                     <span className="translate-y-[-1px]">
-                      {isSubmitting ? "Envoi en cours..." : "Envoyer"}
+                      {isSubmitting ? t.contact.form.sending : t.contact.form.send}
                     </span>
                     <svg
                       className="w-5 h-5"

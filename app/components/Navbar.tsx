@@ -5,8 +5,10 @@ import { usePathname } from "next/navigation";
 import Logo from "./Logo";
 import Link from "next/link";
 import { ModeToggle } from "./ModeToggle";
+import { useLanguage } from "@/lib/useLanguage";
 
 export default function Navbar() {
+  const { t } = useLanguage();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isClosing, setIsClosing] = useState(false);
   const [isBurgerAnimated, setIsBurgerAnimated] = useState(false);
@@ -67,7 +69,7 @@ export default function Navbar() {
                 <Link
                   href="/"
                   className="flex items-center"
-                  aria-label="Retour à l'accueil"
+                  aria-label={t.nav.returnHomepage}
                 >
                   <Logo className="h-8 w-auto" />
                 </Link>
@@ -79,7 +81,7 @@ export default function Navbar() {
                     window.scrollTo({ top: 0, behavior: "smooth" });
                   }}
                   className="flex items-center"
-                  aria-label="Retour à l'accueil"
+                  aria-label={t.nav.returnHomepage}
                 >
                   <Logo className="h-8 w-auto" />
                 </a>
@@ -97,49 +99,49 @@ export default function Navbar() {
                     >
                       <li className="group overflow-hidden relative whitespace-nowrap">
                         <div className="translate-y-0 skew-y-0 transition duration-500 group-hover:-translate-y-[125%] group-hover:skew-y-8">
-                          Accueil
+                          {t.nav.home}
                         </div>
                         <div className="absolute top-0 left-0 translate-y-[125%] skew-y-8 transition duration-500 group-hover:translate-y-0 group-hover:skew-y-0">
-                          Accueil
+                          {t.nav.home}
                         </div>
                       </li>
                     </Link>
                     <Link
-                      href="/#a-propos"
+                      href={`/#${t.sections.about}`}
                       className="relative overflow-hidden px-4 py-2 rounded-full text-sm font-medium text-gray-700 dark:text-gray-200 transition-all duration-300 group"
                     >
                       <li className="group overflow-hidden relative whitespace-nowrap">
                         <div className="translate-y-0 skew-y-0 transition duration-500 group-hover:-translate-y-[125%] group-hover:skew-y-8">
-                          À propos
+                          {t.nav.about}
                         </div>
                         <div className="absolute top-0 left-0 translate-y-[125%] skew-y-8 transition duration-500 group-hover:translate-y-0 group-hover:skew-y-0">
-                          À propos
+                          {t.nav.about}
                         </div>
                       </li>
                     </Link>
                     <Link
-                      href="/#projets"
+                      href={`/#${t.sections.projects}`}
                       className="relative overflow-hidden px-4 py-2 rounded-full text-sm font-medium text-gray-700 dark:text-gray-200 transition-all duration-300 group"
                     >
                       <li className="group overflow-hidden relative whitespace-nowrap">
                         <div className="translate-y-0 skew-y-0 transition duration-500 group-hover:-translate-y-[125%] group-hover:skew-y-8">
-                          Projets
+                          {t.nav.projects}
                         </div>
                         <div className="absolute top-0 left-0 translate-y-[125%] skew-y-8 transition duration-500 group-hover:translate-y-0 group-hover:skew-y-0">
-                          Projets
+                          {t.nav.projects}
                         </div>
                       </li>
                     </Link>
                     <Link
-                      href="/#contact"
+                      href={`/#${t.sections.contact}`}
                       className="relative overflow-hidden px-4 py-2 rounded-full text-sm font-medium text-gray-700 dark:text-gray-200 transition-all duration-300 group"
                     >
                       <li className="group overflow-hidden relative whitespace-nowrap">
                         <div className="translate-y-0 skew-y-0 transition duration-500 group-hover:-translate-y-[125%] group-hover:skew-y-8">
-                          Contact
+                          {t.nav.contact}
                         </div>
                         <div className="absolute top-0 left-0 translate-y-[125%] skew-y-8 transition duration-500 group-hover:translate-y-0 group-hover:skew-y-0">
-                          Contact
+                          {t.nav.contact}
                         </div>
                       </li>
                     </Link>
@@ -156,67 +158,67 @@ export default function Navbar() {
                     >
                       <li className="group overflow-hidden relative whitespace-nowrap">
                         <div className="translate-y-0 skew-y-0 transition duration-500 group-hover:-translate-y-[125%] group-hover:skew-y-8">
-                          Accueil
+                          {t.nav.home}
                         </div>
                         <div className="absolute top-0 left-0 translate-y-[125%] skew-y-8 transition duration-500 group-hover:translate-y-0 group-hover:skew-y-0">
-                          Accueil
+                          {t.nav.home}
                         </div>
                       </li>
                     </a>
                     <a
-                      href="#a-propos"
+                      href={`#${t.sections.about}`}
                       onClick={(e) => {
                         e.preventDefault();
                         document
-                          .querySelector("#a-propos")
+                          .querySelector(`#${t.sections.about}`)
                           ?.scrollIntoView({ behavior: "smooth" });
                       }}
                       className="relative overflow-hidden px-4 py-2 rounded-full text-sm font-medium text-gray-700 dark:text-gray-200 transition-all duration-300 group"
                     >
                       <li className="group overflow-hidden relative whitespace-nowrap">
                         <div className="translate-y-0 skew-y-0 transition duration-500 group-hover:-translate-y-[125%] group-hover:skew-y-8">
-                          À propos
+                          {t.nav.about}
                         </div>
                         <div className="absolute top-0 left-0 translate-y-[125%] skew-y-8 transition duration-500 group-hover:translate-y-0 group-hover:skew-y-0">
-                          À propos
+                          {t.nav.about}
                         </div>
                       </li>
                     </a>
                     <a
-                      href="#projets"
+                      href={`#${t.sections.projects}`}
                       onClick={(e) => {
                         e.preventDefault();
                         document
-                          .querySelector("#projets")
+                          .querySelector(`#${t.sections.projects}`)
                           ?.scrollIntoView({ behavior: "smooth" });
                       }}
                       className="relative overflow-hidden px-4 py-2 rounded-full text-sm font-medium text-gray-700 dark:text-gray-200 transition-all duration-300 group"
                     >
                       <li className="group overflow-hidden relative whitespace-nowrap">
                         <div className="translate-y-0 skew-y-0 transition duration-500 group-hover:-translate-y-[125%] group-hover:skew-y-8">
-                          Projets
+                          {t.nav.projects}
                         </div>
                         <div className="absolute top-0 left-0 translate-y-[125%] skew-y-8 transition duration-500 group-hover:translate-y-0 group-hover:skew-y-0">
-                          Projets
+                          {t.nav.projects}
                         </div>
                       </li>
                     </a>
                     <a
-                      href="#contact"
+                      href={`#${t.sections.contact}`}
                       onClick={(e) => {
                         e.preventDefault();
                         document
-                          .querySelector("#contact")
+                          .querySelector(`#${t.sections.contact}`)
                           ?.scrollIntoView({ behavior: "smooth" });
                       }}
                       className="relative overflow-hidden px-4 py-2 rounded-full text-sm font-medium text-gray-700 dark:text-gray-200 transition-all duration-300 group"
                     >
                       <li className="group overflow-hidden relative whitespace-nowrap">
                         <div className="translate-y-0 skew-y-0 transition duration-500 group-hover:-translate-y-[125%] group-hover:skew-y-8">
-                          Contact
+                          {t.nav.contact}
                         </div>
                         <div className="absolute top-0 left-0 translate-y-[125%] skew-y-8 transition duration-500 group-hover:translate-y-0 group-hover:skew-y-0">
-                          Contact
+                          {t.nav.contact}
                         </div>
                       </li>
                     </a>
@@ -235,12 +237,12 @@ export default function Navbar() {
                 onClick={handleMenuToggle}
                 className="p-2 rounded-md text-gray-700 dark:text-gray-200 hover:text-gray-900 dark:hover:text-white focus:outline-none transition-all relative w-9 h-9 flex items-center justify-center"
                 aria-label={
-                  isMenuOpen || isClosing ? "Fermer le menu" : "Ouvrir le menu"
+                  isMenuOpen || isClosing ? t.nav.burger.closeMenu : t.nav.burger.openMenu
                 }
                 aria-expanded={isMenuOpen || isClosing}
               >
                 <span className="sr-only">
-                  {isMenuOpen || isClosing ? "Fermer" : "Ouvrir"} le menu
+                  {isMenuOpen || isClosing ? t.nav.burger.close : t.nav.burger.open} {t.nav.burger.menu}
                 </span>
                 <div className="flex flex-col justify-between w-6 h-5">
                   <span
@@ -294,34 +296,34 @@ export default function Navbar() {
                       className="text-3xl font-bold text-gray-900 dark:text-white hover:text-gray-600 dark:hover:text-gray-300 transition-all duration-300 hover:scale-110 inline-block"
                       role="menuitem"
                     >
-                      Accueil
+                      {t.nav.home}
                     </Link>
                   </li>
                   <li role="none" className="animate-fade-in-delay-2">
                     <Link
-                      href="/#a-propos"
+                      href={`/#${t.sections.about}`}
                       className="text-3xl font-bold text-gray-900 dark:text-white hover:text-gray-600 dark:hover:text-gray-300 transition-all duration-300 hover:scale-110 inline-block"
                       role="menuitem"
                     >
-                      À propos
+                      {t.nav.about}
                     </Link>
                   </li>
                   <li role="none" className="animate-fade-in-delay-3">
                     <Link
-                      href="/#projets"
+                      href={`/#${t.sections.projects}`}
                       className="text-3xl font-bold text-gray-900 dark:text-white hover:text-gray-600 dark:hover:text-gray-300 transition-all duration-300 hover:scale-110 inline-block"
                       role="menuitem"
                     >
-                      Projets
+                      {t.nav.projects}
                     </Link>
                   </li>
                   <li role="none" className="animate-fade-in-delay-4">
                     <Link
-                      href="/#contact"
+                      href={`/#${t.sections.contact}`}
                       className="text-3xl font-bold text-gray-900 dark:text-white hover:text-gray-600 dark:hover:text-gray-300 transition-all duration-300 hover:scale-110 inline-block"
                       role="menuitem"
                     >
-                      Contact
+                      {t.nav.contact}
                     </Link>
                   </li>
                 </>
@@ -334,37 +336,37 @@ export default function Navbar() {
                       className="text-3xl font-bold text-gray-900 dark:text-white hover:text-gray-600 dark:hover:text-gray-300 transition-all duration-300 hover:scale-110 inline-block"
                       role="menuitem"
                     >
-                      Accueil
+                      {t.nav.home}
                     </a>
                   </li>
                   <li role="none" className="animate-fade-in-delay-2">
                     <a
-                      href="#a-propos"
+                      href={`#${t.sections.about}`}
                       onClick={handleLinkClick}
                       className="text-3xl font-bold text-gray-900 dark:text-white hover:text-gray-600 dark:hover:text-gray-300 transition-all duration-300 hover:scale-110 inline-block"
                       role="menuitem"
                     >
-                      À propos
+                      {t.nav.about}
                     </a>
                   </li>
                   <li role="none" className="animate-fade-in-delay-3">
                     <a
-                      href="#projets"
+                      href={`#${t.sections.projects}`}
                       onClick={handleLinkClick}
                       className="text-3xl font-bold text-gray-900 dark:text-white hover:text-gray-600 dark:hover:text-gray-300 transition-all duration-300 hover:scale-110 inline-block"
                       role="menuitem"
                     >
-                      Projets
+                      {t.nav.projects}
                     </a>
                   </li>
                   <li role="none" className="animate-fade-in-delay-4">
                     <a
-                      href="#contact"
+                      href={`#${t.sections.contact}`}
                       onClick={handleLinkClick}
                       className="text-3xl font-bold text-gray-900 dark:text-white hover:text-gray-600 dark:hover:text-gray-300 transition-all duration-300 hover:scale-110 inline-block"
                       role="menuitem"
                     >
-                      Contact
+                      {t.nav.contact}
                     </a>
                   </li>
                 </>

@@ -3,6 +3,7 @@
 import * as React from "react";
 import { useTheme } from "next-themes";
 import styled from "styled-components";
+import { useLanguage } from "@/lib/useLanguage";
 
 const StyledWrapper = styled.div`
   .themeToggle {
@@ -94,6 +95,7 @@ export function ModeToggle() {
   const { setTheme, resolvedTheme } = useTheme();
   const [mounted, setMounted] = React.useState(false);
   const uniqueId = React.useId();
+  const { t } = useLanguage();
 
   React.useEffect(() => {
     setMounted(true);
@@ -136,7 +138,7 @@ export function ModeToggle() {
             checked={false}
             disabled
             readOnly
-            aria-label="Basculer entre le thème clair et sombre"
+            aria-label={t.nav.modeToggle}
           />
           <svg
             width={28}

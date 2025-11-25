@@ -2,13 +2,15 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useLanguage } from "@/lib/useLanguage";
 
 export default function Footer() {
+  const { t } = useLanguage();
   const pathname = usePathname();
   const isLegalPage = pathname !== "/";
 
   return (
-    <footer className="bg-gray-50 dark:bg-gray-900 border-t border-gray-200 dark:border-gray-750">
+    <footer className="bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-750">
       <div className="max-w-7xl mx-auto px-6 sm:px-6 py-10 sm:py-12">
         {/* Trois colonnes */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 mb-6 sm:mb-8">
@@ -18,15 +20,14 @@ export default function Footer() {
               Valentin Gil
             </h3>
             <p className="text-gray-600 dark:text-gray-400">
-              Étudiant en BUT MMI passionné par le développement web et la
-              création d&apos;expériences numériques modernes et accessibles.
+              {t.footer.description}
             </p>
           </div>
 
           {/* Colonne 2 - Navigation */}
           <div>
             <h3 className="text-2xl font-semibold mb-3 sm:mb-4 text-gray-900 dark:text-white">
-              Navigation
+              {t.footer.navigation}
             </h3>
             <ul className="space-y-2">
               {isLegalPage ? (
@@ -36,31 +37,31 @@ export default function Footer() {
                       href="/"
                       className="text-sm sm:text-base text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white transition-colors"
                     >
-                      Accueil
+                      {t.nav.home}
                     </Link>
                   </li>
                   <li>
                     <Link
-                      href="/#a-propos"
+                      href={`/#${t.sections.about}`}
                       className="text-sm sm:text-base text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white transition-colors"
                     >
-                      À propos
+                      {t.nav.about}
                     </Link>
                   </li>
                   <li>
                     <Link
-                      href="/#projets"
+                      href={`/#${t.sections.projects}`}
                       className="text-sm sm:text-base text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white transition-colors"
                     >
-                      Projets
+                      {t.nav.projects}
                     </Link>
                   </li>
                   <li>
                     <Link
-                      href="/#contact"
+                      href={`/#${t.sections.contact}`}
                       className="text-sm sm:text-base text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white transition-colors"
                     >
-                      Contact
+                      {t.nav.contact}
                     </Link>
                   </li>
                 </>
@@ -75,49 +76,49 @@ export default function Footer() {
                       }}
                       className="text-sm sm:text-base text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white transition-colors"
                     >
-                      Accueil
+                      {t.nav.home}
                     </a>
                   </li>
                   <li>
                     <a
-                      href="#a-propos"
+                      href={`#${t.sections.about}`}
                       onClick={(e) => {
                         e.preventDefault();
                         document
-                          .querySelector("#a-propos")
+                          .querySelector(`#${t.sections.about}`)
                           ?.scrollIntoView({ behavior: "smooth" });
                       }}
                       className="text-sm sm:text-base text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white transition-colors"
                     >
-                      À propos
+                      {t.nav.about}
                     </a>
                   </li>
                   <li>
                     <a
-                      href="#projets"
+                      href={`#${t.sections.projects}`}
                       onClick={(e) => {
                         e.preventDefault();
                         document
-                          .querySelector("#projets")
+                          .querySelector(`#${t.sections.projects}`)
                           ?.scrollIntoView({ behavior: "smooth" });
                       }}
                       className="text-sm sm:text-base text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white transition-colors"
                     >
-                      Projets
+                      {t.nav.projects}
                     </a>
                   </li>
                   <li>
                     <a
-                      href="#contact"
+                      href={`#${t.sections.contact}`}
                       onClick={(e) => {
                         e.preventDefault();
                         document
-                          .querySelector("#contact")
+                          .querySelector(`#${t.sections.contact}`)
                           ?.scrollIntoView({ behavior: "smooth" });
                       }}
                       className="text-sm sm:text-base text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white transition-colors"
                     >
-                      Contact
+                      {t.nav.contact}
                     </a>
                   </li>
                 </>
@@ -128,7 +129,7 @@ export default function Footer() {
           {/* Colonne 3 - Contact & Réseaux */}
           <div>
             <h3 className="text-2xl font-semibold mb-3 sm:mb-4 text-gray-900 dark:text-white">
-              Contact & Réseaux
+              {t.footer.contact.title}
             </h3>
 
             {/* Email */}
@@ -172,7 +173,7 @@ export default function Footer() {
             {/* Réseaux sociaux */}
             <div>
               <p className="text-sm text-gray-700 dark:text-gray-300 mb-3">
-                Me suivre :
+                {t.footer.contact.follow}
               </p>
               <div className="flex gap-3">
                 <a
@@ -222,21 +223,21 @@ export default function Footer() {
         {/* Copyright et liens légaux */}
         <div className="flex flex-col md:flex-row justify-between items-center gap-3 sm:gap-4 text-center md:text-left">
           <p className="text-sm text-gray-700 dark:text-gray-300">
-            © {new Date().getFullYear()} Valentin Gil. Tous droits réservés.
+            © {new Date().getFullYear()} Valentin Gil. {t.footer.rights}
           </p>
           <div className="flex items-center gap-2 text-sm">
             <Link
               href="/mentions-legales"
               className="text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white transition-colors"
             >
-              Mentions Légales
+              {t.footer.legal}
             </Link>
             <span className="text-gray-700 dark:text-gray-300">•</span>
             <Link
               href="/politique-confidentialite"
               className="text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white transition-colors"
             >
-              Politique de Confidentialité
+              {t.footer.privacy}
             </Link>
           </div>
         </div>
