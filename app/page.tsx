@@ -185,31 +185,154 @@ export default function Home() {
         </div>
 
         {/* Section À propos */}
-        <section id="about" className="py-32 bg-gray-50 dark:bg-[#18181b]">
-          <div className="max-w-3xl mx-auto px-4">
-            <h2 className="text-3xl font-bold mb-4 text-gray-900 dark:text-white">
-              À propos
-            </h2>
-            <p className="text-lg text-gray-700 dark:text-gray-300 mb-2">
-              Je m&apos;appelle Valentin Gil, étudiant en BUT Métiers du
-              Multimédia et de l&apos;Internet à l&apos;IUT d&apos;Angoulême.
-              Passionné par le web, j&apos;aime concevoir des interfaces
-              modernes, accessibles et performantes.
-            </p>
-            <p className="text-lg text-gray-700 dark:text-gray-300">
-              J&apos;utilise principalement Next.js, React, Tailwind CSS et je
-              m&apos;intéresse à l&apos;UX/UI, l&apos;accessibilité et
-              l&apos;optimisation des performances.
-            </p>
+        <section id="about" className="py-32 bg-white dark:bg-[#121212]">
+          <div className="max-w-7xl mx-auto px-6 sm:px-12">
+            {/* Titre et barre */}
+            <div className="mb-16 sm:mb-20">
+              <div className="flex items-end gap-6 sm:gap-8">
+                <h2 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-gray-900 dark:text-white whitespace-nowrap">
+                  À Propos
+                </h2>
+                <div className="h-[3px] w-full bg-gray-900/30 dark:bg-white/30 mb-2"></div>
+              </div>
+            </div>
+
+            {/* Contenu */}
+            <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-start">
+              {/* Photo de profil */}
+              <div className="flex-shrink-0 w-full lg:w-auto">
+                <div className="relative w-full h-80 sm:w-72 sm:h-[22rem] sm:mx-auto lg:mx-0 rounded-[1.5rem] overflow-hidden group">
+                  <img 
+                    src="/valentin-gil.jpg" 
+                    alt="Valentin Gil" 
+                    className="w-full h-full object-cover"
+                  />
+                  {/* Tag crédit photo */}
+                  <div className="absolute bottom-3 left-3 px-3 py-1.5 bg-black/70 dark:bg-white/80 backdrop-blur-sm rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <p className="text-xs text-white dark:text-black font-medium">📸 Arthur Binchet</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Contenu */}
+              <div className="flex-1">
+                <div className="mb-6">
+                  <h3 className="text-3xl sm:text-4xl font-medium text-gray-900 dark:text-white">
+                    Valentin
+                  </h3>
+                  <h4 className="text-5xl sm:text-6xl font-bold text-gray-900 dark:text-white">
+                    Gil
+                  </h4>
+                </div>
+
+                {/* Tags */}
+                <div className="flex flex-wrap gap-2 sm:gap-3 mb-6 sm:mb-8">
+                  <span className="inline-flex items-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 bg-[#e5e5e5]/80 dark:bg-[#2a2a2a]/80 rounded-full text-xs sm:text-sm font-medium text-[#191919] dark:text-white transition-colors">
+                    <svg className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#191919] dark:text-white" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
+                    </svg>
+                    Angoulême
+                  </span>
+                  <span className="px-3 sm:px-4 py-1.5 sm:py-2 bg-[#e5e5e5]/80 dark:bg-[#2a2a2a]/80 rounded-full text-xs sm:text-sm font-medium text-[#191919] dark:text-white transition-colors">
+                    Développement Web
+                  </span>
+                  <span className="px-3 sm:px-4 py-1.5 sm:py-2 bg-[#e5e5e5]/80 dark:bg-[#2a2a2a]/80 rounded-full text-xs sm:text-sm font-medium text-[#191919] dark:text-white transition-colors">
+                    Web Design
+                  </span>
+                  <span className="px-3 sm:px-4 py-1.5 sm:py-2 bg-[#e5e5e5]/80 dark:bg-[#2a2a2a]/80 rounded-full text-xs sm:text-sm font-medium text-[#191919] dark:text-white transition-colors">
+                    UX/UI
+                  </span>
+                </div>
+
+                {/* Description */}
+                <p className="text-base sm:text-lg text-gray-700 dark:text-gray-300 max-w-3xl leading-relaxed mb-12">
+                  Étudiant en BUT MMI, c&apos;est au cours de ma première année que je me suis découvert une passion pour le développement web et le design. Aujourd&apos;hui, je conçois des interfaces modernes et performantes, du wireframe au produit final.
+                </p>
+
+                {/* Parcours */}
+                <div className="mb-8">
+                  <h5 className="text-2xl sm:text-3xl font-bold mb-6 text-[#191919] dark:text-white">
+                    Mon parcours
+                  </h5>
+                  <div className="relative space-y-6">
+                    {/* Ligne de progression à gauche - partie complétée en blanc depuis le bas */}
+                    <div className="absolute left-[7px] bottom-0 w-[2px] bg-[#191919] dark:bg-white" style={{height: 'calc(100% - 2rem)'}}></div>
+                    {/* Ligne de progression à faire en gris en haut */}
+                    <div className="absolute left-[7px] top-0 w-[2px] bg-gray-300 dark:bg-gray-700 h-8"></div>
+                    
+                    {/* BUT MMI */}
+                    <div className="relative pl-8">
+                      {/* Point blanc avec anneau (en cours) */}
+                      <div className="absolute left-0 top-2 w-4 h-4 rounded-full bg-gray-300 dark:bg-gray-700 border-[3px] border-[#191919] dark:border-white"></div>
+                      <div className="flex items-start justify-between gap-2">
+                        <div className="flex-1 min-w-0">
+                          <h6 className="text-lg font-bold text-[#191919] dark:text-white uppercase">IUT D&apos;Angoulême</h6>
+                          <p className="text-base font-medium text-gray-700 dark:text-gray-300">BUT Métiers du Multimédia et de l&apos;Internet</p>
+                        </div>
+                        <span className="text-sm italic text-gray-600 dark:text-gray-400 whitespace-nowrap flex-shrink-0">2024 - 2027</span>
+                      </div>
+                    </div>
+
+                    {/* Epitech */}
+                    <div className="relative pl-8">
+                      {/* Point blanc plein (complété) */}
+                      <div className="absolute left-0 top-2 w-4 h-4 rounded-full bg-[#191919] dark:bg-white"></div>
+                      <div className="flex items-start justify-between gap-2">
+                        <div className="flex-1 min-w-0">
+                          <h6 className="text-lg font-bold text-[#191919] dark:text-white uppercase">Epitech Technology - Bordeaux</h6>
+                          <p className="text-base font-medium text-gray-700 dark:text-gray-300">Ingénierie logicielle</p>
+                        </div>
+                        <span className="text-sm italic text-gray-600 dark:text-gray-400 whitespace-nowrap flex-shrink-0">2023 - 2024</span>
+                      </div>
+                    </div>
+
+                    {/* Bac général */}
+                    <div className="relative pl-8">
+                      {/* Point blanc plein (complété) */}
+                      <div className="absolute left-0 top-2 w-4 h-4 rounded-full bg-[#191919] dark:bg-white"></div>
+                      <div className="flex items-start justify-between gap-2">
+                        <div className="flex-1 min-w-0">
+                          <h6 className="text-lg font-bold text-[#191919] dark:text-white uppercase">Lycée Les Iris - Lormont</h6>
+                          <p className="text-base font-medium text-gray-700 dark:text-gray-300">Baccalauréat général obtenu</p>
+                        </div>
+                        <span className="text-sm italic text-gray-600 dark:text-gray-400 whitespace-nowrap flex-shrink-0">Juillet 2023</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Bouton CV */}
+                <div className="flex justify-center lg:justify-start">
+                  <a
+                    href="/assets/GIL_Valentin_CV.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 px-6 py-3 bg-[#191919] dark:bg-white text-white dark:text-[#191919] rounded-full text-sm font-semibold hover:opacity-80 transition-opacity duration-300"
+                  >
+                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                    </svg>
+                    Télécharger mon CV
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
 
         {/* Section Projets */}
         <section id="projets" className="py-32 bg-gray-50 dark:bg-[#18181b]">
-          <div className="max-w-5xl mx-auto px-4">
-            <h2 className="text-3xl font-bold mb-8 text-gray-900 dark:text-white">
-              Projets
-            </h2>
+          <div className="max-w-7xl mx-auto px-6 sm:px-12">
+            {/* Titre et barre */}
+            <div className="mb-16 sm:mb-20">
+              <div className="flex items-end gap-6 sm:gap-8">
+                <h2 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-gray-900 dark:text-white whitespace-nowrap">
+                  Projets
+                </h2>
+                <div className="h-[3px] w-full bg-gray-900/30 dark:bg-white/30 mb-2"></div>
+              </div>
+            </div>
+
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="bg-white dark:bg-[#23272f] rounded-xl shadow p-6">
                 <h3 className="text-xl font-semibold mb-2">Portfolio</h3>
@@ -232,10 +355,18 @@ export default function Home() {
 
         {/* Section Contact */}
         <section id="contact" className="py-32">
-          <div className="max-w-xl mx-auto px-4 text-center">
-            <h2 className="text-3xl font-bold mb-4 text-gray-900 dark:text-white">
-              Contact
-            </h2>
+          <div className="max-w-7xl mx-auto px-6 sm:px-12">
+            {/* Titre et barre */}
+            <div className="mb-16 sm:mb-20">
+              <div className="flex items-end gap-6 sm:gap-8">
+                <h2 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-gray-900 dark:text-white whitespace-nowrap">
+                  Contact
+                </h2>
+                <div className="h-[3px] w-full bg-gray-900/30 dark:bg-white/30 mb-2"></div>
+              </div>
+            </div>
+
+            <div className="text-center">
             <p className="text-lg text-gray-700 dark:text-gray-300 mb-6">
               Envie de collaborer, de me proposer un stage ou simplement
               d&apos;échanger ?
@@ -246,6 +377,7 @@ export default function Home() {
             >
               Me contacter
             </a>
+            </div>
           </div>
         </section>
 
