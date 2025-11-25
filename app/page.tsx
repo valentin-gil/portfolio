@@ -253,7 +253,7 @@ export default function Home() {
         </div>
 
         {/* Section À propos */}
-        <section id="a-propos" className="pt-32 pb-8 bg-white dark:bg-[#121212]">
+        <section id="a-propos" className="pt-32 pb-8 bg-gray-50 dark:bg-[#121212]">
           <div className="max-w-7xl mx-auto px-6 sm:px-12">
             {/* Titre et barre */}
             <div className="mb-16 sm:mb-20">
@@ -387,7 +387,7 @@ export default function Home() {
         </section>
 
         {/* Section Projets */}
-        <section id="projets" className="pt-32 pb-8 bg-white dark:bg-[#121212]">
+        <section id="projets" className="pt-32 pb-8 bg-gray-50 dark:bg-[#121212]">
           <div className="max-w-7xl mx-auto px-6 sm:px-12">
             {/* Titre et barre */}
             <div className="mb-16 sm:mb-20">
@@ -421,7 +421,7 @@ export default function Home() {
         </section>
 
         {/* Section Contact */}
-        <section id="contact" className="pt-32 pb-24 bg-white dark:bg-[#121212]">
+        <section id="contact" className="pt-32 pb-24 bg-gray-50 dark:bg-[#121212]">
           <div className="max-w-7xl mx-auto px-6 sm:px-12">
             {/* Titre et barre */}
             <div className="mb-16 sm:mb-20">
@@ -528,7 +528,7 @@ export default function Home() {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 border border-gray-300 dark:border-gray-700 rounded-lg bg-white dark:bg-[#1a1a1a] text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#191919] dark:focus:ring-white transition-shadow"
+                    className="w-full px-4 py-3 border border-gray-300 dark:border-gray-700 rounded-lg bg-gray-50 dark:bg-[#1a1a1a] text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#191919] dark:focus:ring-white transition-shadow"
                   />
                   <textarea
                     name="message"
@@ -537,7 +537,7 @@ export default function Home() {
                     value={formData.message}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 border border-gray-300 dark:border-gray-700 rounded-lg bg-white dark:bg-[#1a1a1a] text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#191919] dark:focus:ring-white transition-shadow resize-none"
+                    className="w-full px-4 py-3 border border-gray-300 dark:border-gray-700 rounded-lg bg-gray-50 dark:bg-[#1a1a1a] text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#191919] dark:focus:ring-white transition-shadow resize-none"
                   ></textarea>
                   
                   {submitStatus === 'success' && (

@@ -165,7 +165,7 @@ export default function Navbar() {
     {/* Menu Mobile Plein Écran */}
     {isMenuOpen && (
       <div 
-        className={`lg:hidden fixed inset-0 z-40 bg-white dark:bg-[#101010] ${
+        className={`lg:hidden fixed inset-0 z-40 bg-gray-50 dark:bg-[#101010] ${
           isClosing ? 'animate-fade-out' : 'animate-fade-in'
         }`}
         role="menu" 
