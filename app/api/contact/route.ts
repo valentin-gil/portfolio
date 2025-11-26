@@ -54,8 +54,8 @@ ${message}
           <meta name="viewport" content="width=device-width, initial-scale=1.0">
           <title>Nouveau message</title>
         </head>
-        <body style="margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; background-color: #070707;">
-          <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background-color: #070707; padding: 40px 20px;">
+        <body style="margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;">
+          <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="padding: 40px 20px;">
             <tr>
               <td align="center">
                 <table role="presentation" width="600" cellpadding="0" cellspacing="0" style="background-color: #121212; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);">
@@ -95,8 +95,8 @@ ${message}
                               ${prenom} ${nom}
                             </h2>
                             <div style="display: inline-flex; align-items: center; gap: 8px; padding: 6px 12px; background-color: rgba(255, 255, 255, 0.1); border-radius: 20px;">
-                              <img src="https://vgil.fr/envelope.png" alt="Email" style="width: 16px; height: 16px; flex-shrink: 0;" />
-                              <a href="mailto:${email}" style="color: oklch(87.2% 0.01 258.338); font-size: 14px; font-weight: 500; text-decoration: none;">
+                              <img src="https://vgil.fr/envelope.png" alt="Email" style="width: 16px; height: 16px; flex-shrink: 0; display: block;" />
+                              <a href="mailto:${email}" style="color: oklch(87.2% 0.01 258.338) !important; font-size: 14px; font-weight: 500; text-decoration: none !important; transform: translateY(-1px); display: inline-block; margin-left: 4px;">
                                 ${email}
                               </a>
                             </div>
@@ -106,10 +106,10 @@ ${message}
 
                       <!-- Message -->
                       <div style="margin-bottom: 30px;">
-                        <h2 style="margin: 0 0 16px 0; color: #ffffff; font-size: 18px; font-weight: 600;">
+                        <h2 style="margin: 0 0 16px 0; color: #ffffff; font-size: 24px; font-weight: 600;">
                           Message
                         </h2>
-                        <div style="background-color: #1a1a1a; padding: 20px; border-radius: 8px; color: #d0d0d0; font-size: 15px; line-height: 1.6;">
+                        <div style="background-color: #1a1a1a; padding: 20px; border-radius: 8px; color: #d0d0d0; font-size: 16px; line-height: 1.6;">
                           ${message.replace(/\n/g, '<br>')}
                         </div>
                       </div>
