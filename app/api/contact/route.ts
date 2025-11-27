@@ -96,9 +96,9 @@ ${message}
                             </h2>
                             <div style="display: inline-flex; align-items: center; gap: 8px; padding: 6px 12px; background-color: rgba(255, 255, 255, 0.1); border-radius: 20px;">
                               <img src="https://vgil.fr/envelope.png" alt="Email" style="width: 16px; height: 16px; flex-shrink: 0; display: block;" />
-                              <p style="color: oklch(87.2% 0.01 258.338) !important; font-size: 14px; font-weight: 500; text-decoration: none !important; transform: translateY(-1px); display: inline-block; margin-left: 4px;">
+                              <a href="mailto:${email}" style="color: oklch(87.2% 0.01 258.338) !important; font-size: 14px; font-weight: 500; text-decoration: none !important; transform: translateY(-1px); display: inline-block; margin-left: 4px;">
                                 ${email}
-                              </p>
+                              </a>
                             </div>
                           </div>
                         </div>
