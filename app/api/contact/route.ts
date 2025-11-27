@@ -85,25 +85,29 @@ ${message}
 
                       <!-- Informations expéditeur -->
                       <div style="background-color: #1a1a1a; padding: 24px; border-radius: 12px; margin-bottom: 30px;">
-                        <div style="display: flex; align-items: center; gap: 24px;">
-                          <!-- Photo de profil placeholder -->
-                          <div style="width: 80px; height: 80px; border-radius: 50%; background: linear-gradient(135deg, #2a2a2a 0%, #3a3a3a 100%); flex-shrink: 0;"></div>
-                          
-                          <!-- Informations -->
-                          <div style="flex: 1; margin-left: 16px;">
-                            <h2 style="margin: 0 0 8px 0; color: #ffffff; font-size: 24px; font-weight: 700; letter-spacing: -0.5px;">
-                              ${prenom} ${nom}
-                            </h2>
-                            <div style="display: inline-flex; align-items: center; gap: 8px; padding: 6px 12px; background-color: rgba(255, 255, 255, 0.1); border-radius: 20px;">
-                              <img src="https://vgil.fr/envelope.png" alt="Email" style="width: 16px; height: 16px; flex-shrink: 0; display: block;" />
-                              <span style="color: oklch(87.2% 0.01 258.338); font-size: 14px; font-weight: 500; display: inline-block; margin-left: 4px;">
-                                <a href="mailto:${email}" style="color: inherit !important; text-decoration: none !important; border-bottom: none !important; box-shadow: none !important;">
-                                  ${email}
-                                </a>
-                              </span>
-                            </div>
-                          </div>
-                        </div>
+                        <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
+                          <tr>
+                            <!-- Photo de profil placeholder -->
+                            <td style="width: 80px; vertical-align: top;">
+                              <div style="width: 80px; height: 80px; border-radius: 50%; background: linear-gradient(135deg, #2a2a2a 0%, #3a3a3a 100%);"></div>
+                            </td>
+                            
+                            <!-- Informations -->
+                            <td style="vertical-align: top; padding-left: 24px;">
+                              <h2 style="margin: 0 0 8px 0; color: #ffffff; font-size: 24px; font-weight: 700; letter-spacing: -0.5px;">
+                                ${prenom} ${nom}
+                              </h2>
+                              <div style="display: inline-flex; align-items: center; gap: 8px; padding: 6px 12px; background-color: rgba(255, 255, 255, 0.1); border-radius: 20px;">
+                                <img src="https://vgil.fr/envelope.png" alt="Email" style="width: 16px; height: 16px; flex-shrink: 0; display: block;" />
+                                <span style="color: #D1D5DC; font-size: 14px; font-weight: 500; display: inline-block; margin-left: 4px;">
+                                  <a href="mailto:${email}" style="color: inherit !important; text-decoration: none !important; border-bottom: none !important; box-shadow: none !important;">
+                                    ${email}
+                                  </a>
+                                </span>
+                              </div>
+                            </td>
+                          </tr>
+                        </table>
                       </div>
 
                       <!-- Message -->
