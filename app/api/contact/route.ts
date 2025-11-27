@@ -72,7 +72,7 @@ ${message}
                       <!-- Titre avec barre -->
                       <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin-bottom: 32px;">
                         <tr>
-                          <td style="vertical-align: bottom; padding-bottom: 8px;">
+                          <td style="vertical-align: bottom; padding-bottom: 8px; white-space: nowrap;">
                             <h1 style="margin: 0; color: #ffffff; font-size: 42px; font-weight: 700; white-space: nowrap; letter-spacing: -0.5px;">
                               Nouveau message
                             </h1>
@@ -102,7 +102,7 @@ ${message}
                                   <td style="padding: 6px 6px 6px 12px;">
                                     <img src="https://vgil.fr/envelope.png" alt="Email" style="width: 16px; height: 16px; display: block; vertical-align: middle;" />
                                   </td>
-                                  <td style="padding: 6px 12px 6px 8px;">
+                                  <td style="padding: 6px 12px 6px 4px;">
                                     <a href="mailto:${email}" style="color: #D1D5DC !important; font-size: 14px; font-weight: 500; text-decoration: none !important; border-bottom: none !important; box-shadow: none !important; white-space: nowrap; display: inline-block; vertical-align: middle;">
                                       ${email}
                                     </a>
