@@ -97,14 +97,18 @@ ${message}
                               <h2 style="margin: 0 0 8px 0; color: #ffffff; font-size: 24px; font-weight: 700; letter-spacing: -0.5px;">
                                 ${prenom} ${nom}
                               </h2>
-                              <div style="display: inline-flex; align-items: center; gap: 8px; padding: 6px 12px; background-color: rgba(255, 255, 255, 0.1); border-radius: 20px;">
-                                <img src="https://vgil.fr/envelope.png" alt="Email" style="width: 16px; height: 16px; flex-shrink: 0; display: block;" />
-                                <span style="color: #D1D5DC; font-size: 14px; font-weight: 500; display: inline-block; margin-left: 4px;">
-                                  <a href="mailto:${email}" style="color: inherit !important; text-decoration: none !important; border-bottom: none !important; box-shadow: none !important;">
-                                    ${email}
-                                  </a>
-                                </span>
-                              </div>
+                              <table role="presentation" cellpadding="0" cellspacing="0" style="background-color: rgba(255, 255, 255, 0.1); border-radius: 20px;">
+                                <tr>
+                                  <td style="padding: 6px 6px 6px 12px;">
+                                    <img src="https://vgil.fr/envelope.png" alt="Email" style="width: 16px; height: 16px; display: block; vertical-align: middle;" />
+                                  </td>
+                                  <td style="padding: 6px 12px 6px 8px;">
+                                    <a href="mailto:${email}" style="color: #D1D5DC !important; font-size: 14px; font-weight: 500; text-decoration: none !important; border-bottom: none !important; box-shadow: none !important; white-space: nowrap; display: inline-block; vertical-align: middle;">
+                                      ${email}
+                                    </a>
+                                  </td>
+                                </tr>
+                              </table>
                             </td>
                           </tr>
                         </table>
