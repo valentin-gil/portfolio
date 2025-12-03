@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useLanguage } from "@/lib/useLanguage";
 
 interface ProjectCardProps {
@@ -49,10 +50,11 @@ export default function ProjectCard({
     if (images.length === 1) {
       return (
         <div className="relative h-48 bg-gray-900">
-          <img
+          <Image
             src={images[0]}
             alt={title}
-            className="w-full h-full object-cover"
+            fill
+            className="object-cover"
           />
         </div>
       );
@@ -61,16 +63,22 @@ export default function ProjectCard({
     if (images.length === 2) {
       return (
         <div className="grid grid-cols-2 gap-2">
-          <img
-            src={images[0]}
-            alt={`${title} 1`}
-            className="w-full h-48 object-cover"
-          />
-          <img
-            src={images[1]}
-            alt={`${title} 2`}
-            className="w-full h-48 object-cover"
-          />
+          <div className="relative h-48">
+            <Image
+              src={images[0]}
+              alt={`${title} 1`}
+              fill
+              className="object-cover"
+            />
+          </div>
+          <div className="relative h-48">
+            <Image
+              src={images[1]}
+              alt={`${title} 2`}
+              fill
+              className="object-cover"
+            />
+          </div>
         </div>
       );
     }
@@ -78,21 +86,30 @@ export default function ProjectCard({
     if (images.length === 3) {
       return (
         <div className="grid grid-cols-2 gap-2">
-          <img
-            src={images[0]}
-            alt={`${title} 1`}
-            className="w-full h-48 object-cover row-span-2"
-          />
-          <img
-            src={images[1]}
-            alt={`${title} 2`}
-            className="w-full h-[5.75rem] object-cover"
-          />
-          <img
-            src={images[2]}
-            alt={`${title} 3`}
-            className="w-full h-[5.75rem] object-cover"
-          />
+          <div className="relative h-48 row-span-2">
+            <Image
+              src={images[0]}
+              alt={`${title} 1`}
+              fill
+              className="object-cover"
+            />
+          </div>
+          <div className="relative h-[5.75rem]">
+            <Image
+              src={images[1]}
+              alt={`${title} 2`}
+              fill
+              className="object-cover"
+            />
+          </div>
+          <div className="relative h-[5.75rem]">
+            <Image
+              src={images[2]}
+              alt={`${title} 3`}
+              fill
+              className="object-cover"
+            />
+          </div>
         </div>
       );
     }

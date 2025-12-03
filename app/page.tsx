@@ -1,6 +1,7 @@
 "use client";
 
 import { Suspense, useState } from "react";
+import Image from "next/image";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import { ThemeProvider } from "./components/theme-provider";
@@ -341,10 +342,11 @@ export default function Home() {
               {/* Photo de profil */}
               <div className="flex-shrink-0 w-full lg:w-auto">
                 <div className="relative w-full h-80 sm:w-72 sm:h-[22rem] sm:mx-auto lg:mx-0 rounded-[1.5rem] overflow-hidden group">
-                  <img
+                  <Image
                     src="/valentin-gil.jpg"
                     alt="Valentin Gil"
-                    className="w-full h-full object-cover object-top"
+                    fill
+                    className="object-cover object-top"
                   />
                   {/* Tag crédit photo */}
                   <div className="absolute bottom-3 left-3 px-3 py-1.5 bg-black/70 dark:bg-white/80 backdrop-blur-sm rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300">
@@ -569,11 +571,12 @@ export default function Home() {
               <div>
                 <div className="mb-8">
                   <div className="flex items-center gap-4 mb-6">
-                    <div className="w-24 h-24 rounded-full overflow-hidden flex-shrink-0">
-                      <img
+                    <div className="relative w-24 h-24 rounded-full overflow-hidden flex-shrink-0">
+                      <Image
                         src="/valentin-gil.jpg"
                         alt="Valentin Gil"
-                        className="w-full h-full object-cover object-top"
+                        fill
+                        className="object-cover object-top"
                       />
                     </div>
                     <div>
