@@ -66,7 +66,7 @@ ${message}
                       
                       <!-- Logo VG -->
                       <div style="text-align: center; margin-bottom: 40px;">
-                        <img src="https://vgil.fr/vg.png" alt="Logo VG" style="width: 80px; height: auto;" />
+                        <a href="https://vgil.fr"><img src="https://vgil.fr/vg.png" alt="Logo VG" style="width: 80px; height: auto;" /></a>
                       </div>
 
                       <!-- Titre avec barre -->
