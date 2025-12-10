@@ -58,7 +58,7 @@ export default function Navbar() {
   return (
     <>
       <nav
-        className="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 w-[calc(100%-3rem)] lg:w-auto"
+        className="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 w-[calc(100%-3rem)] md:w-auto"
         aria-label="Navigation principale"
       >
         <div className="backdrop-blur-sm bg-white/10 dark:bg-black/10 border border-gray-800/30 dark:border-white/30 rounded-full px-8 sm:px-12 shadow-lg">
@@ -89,7 +89,7 @@ export default function Navbar() {
             </div>
 
             {/* Menu Desktop */}
-            <div className="hidden lg:flex lg:items-center ml-8">
+            <div className="hidden md:flex md:items-center ml-8">
               <ul className="flex items-baseline space-x-2">
                 {isLegalPage ? (
                   <>
@@ -231,7 +231,7 @@ export default function Navbar() {
             </div>
 
             {/* Bouton menu mobile */}
-            <div className="lg:hidden ml-4 flex items-center gap-2">
+            <div className="md:hidden ml-4 flex items-center gap-2">
               <ModeToggle />
               <button
                 onClick={handleMenuToggle}
@@ -281,7 +281,7 @@ export default function Navbar() {
       {/* Menu Mobile Plein Écran */}
       {isMenuOpen && (
         <div
-          className={`lg:hidden fixed inset-0 z-40 bg-gray-50 dark:bg-[#101010] ${
+          className={`md:hidden fixed inset-0 z-40 bg-gray-50 dark:bg-[#101010] ${
             isClosing ? "animate-fade-out" : "animate-fade-in"
           }`}
           role="menu"
