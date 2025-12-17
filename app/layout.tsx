@@ -36,6 +36,13 @@ export const metadata: Metadata = {
     apple: [{ url: "/apple-icon.png", sizes: "180x180", type: "image/png" }],
   },
   manifest: "/site.webmanifest",
+  alternates: {
+    canonical: "https://vgil.fr",
+    languages: {
+      "fr": "https://vgil.fr",
+      "x-default": "https://vgil.fr",
+    },
+  },
   openGraph: {
     title: "Valentin Gil - Portfolio",
     description:
