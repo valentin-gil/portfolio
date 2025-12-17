@@ -11,24 +11,22 @@ import {
   useState,
 } from "react";
 
-import {
-  Color,
-  ShaderMaterial,
-  ShaderLib,
-  UniformsUtils,
-  BufferGeometry,
-  BufferAttribute,
-  Mesh,
-  DirectionalLight,
-  Camera,
-  Material,
-  type IUniform,
-  type MeshPhysicalMaterialParameters,
-  type MaterialParameters,
-  type Texture,
-  type ShaderLibShader,
-  MeshStandardMaterial,
-} from "three";
+import { Color } from "three/src/math/Color.js";
+import { ShaderMaterial } from "three/src/materials/ShaderMaterial.js";
+import { ShaderLib } from "three/src/renderers/shaders/ShaderLib.js";
+import { UniformsUtils } from "three/src/renderers/shaders/UniformsUtils.js";
+import { BufferGeometry } from "three/src/core/BufferGeometry.js";
+import { BufferAttribute } from "three/src/core/BufferAttribute.js";
+import { Mesh } from "three/src/objects/Mesh.js";
+import { DirectionalLight } from "three/src/lights/DirectionalLight.js";
+import { Camera } from "three/src/cameras/Camera.js";
+import { Material } from "three/src/materials/Material.js";
+import { MeshStandardMaterial } from "three/src/materials/MeshStandardMaterial.js";
+import type { IUniform } from "three/src/renderers/shaders/UniformsLib.js";
+import type { MeshPhysicalMaterialParameters } from "three/src/materials/MeshPhysicalMaterial.js";
+import type { MaterialParameters } from "three/src/materials/Material.js";
+import type { Texture } from "three/src/textures/Texture.js";
+import type { ShaderLibShader } from "three/src/renderers/shaders/ShaderLib.js";
 
 import { Canvas, useFrame } from "@react-three/fiber";
 import { PerspectiveCamera } from "@react-three/drei";
