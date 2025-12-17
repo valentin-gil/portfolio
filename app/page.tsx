@@ -327,9 +327,9 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-start">
-              <div className="flex-shrink-0 w-full lg:w-auto">
-                <div className="relative w-full h-80 sm:w-72 sm:h-[22rem] sm:mx-auto lg:mx-0 rounded-[1.5rem] overflow-hidden group">
+            <div className="flex flex-col md:flex-row gap-8 md:gap-12 items-start">
+              <div className="flex-shrink-0 w-full md:w-auto">
+                <div className="relative w-full h-80 sm:w-72 sm:h-[22rem] sm:mx-auto md:mx-0 rounded-[1.5rem] overflow-hidden group">
                   <Image
                     src="/valentin-gil.jpg"
                     alt="Valentin Gil"
