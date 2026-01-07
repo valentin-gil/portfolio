@@ -8,7 +8,7 @@
 
 ## 🛠️ Stack technique
 
-- **Framework** : Next.js 15 (App Router)
+- **Framework** : Next.js 16 (App Router)
 - **Langage** : TypeScript
 - **Style** : Tailwind CSS 4
 - **Animations** : Three.js (React Three Fiber)
@@ -54,4 +54,4 @@ Le site est déployé automatiquement sur Vercel à chaque push sur la branche `
 
 ---
 
-© 2025 Valentin Gil. Tous droits réservés.
+© 2026 Valentin Gil. Tous droits réservés.
