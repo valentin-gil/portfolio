@@ -45,13 +45,21 @@ ${message}
         <head>
           <meta charset="UTF-8">
           <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <meta name="color-scheme" content="light only">
+          <meta name="supported-color-schemes" content="light">
           <title>Nouveau message</title>
+          <style>
+            :root {
+              color-scheme: light only;
+              supported-color-schemes: light;
+            }
+          </style>
         </head>
-        <body style="margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;">
+        <body style="margin: 0 !important; padding: 0 !important; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important;">
           <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="padding: 40px 20px;">
             <tr>
               <td align="center">
-                <table role="presentation" width="600" cellpadding="0" cellspacing="0" style="background-color: #121212; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);">
+                <table role="presentation" width="600" cellpadding="0" cellspacing="0" style="background-color: #121212 !important; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);">
                   
                   <!-- Content -->
                   <tr>
@@ -66,18 +74,18 @@ ${message}
                       <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin-bottom: 32px;">
                         <tr>
                           <td style="vertical-align: bottom; padding-bottom: 8px; white-space: nowrap;">
-                            <h1 style="margin: 0; color: #ffffff; font-size: 42px; font-weight: 700; white-space: nowrap; letter-spacing: -0.5px;">
+                            <h1 style="margin: 0 !important; color: #ffffff !important; font-size: 42px; font-weight: 700; white-space: nowrap; letter-spacing: -0.5px;">
                               Nouveau message
                             </h1>
                           </td>
                           <td style="width: 100%; vertical-align: bottom; padding-bottom: 12px; padding-left: 24px;">
-                            <div style="height: 3px; background: rgba(255, 255, 255, 0.3); width: 100%;"></div>
+                            <div style="height: 3px; background: rgba(255, 255, 255, 0.3) !important; width: 100%;"></div>
                           </td>
                         </tr>
                       </table>
 
                       <!-- Informations expéditeur -->
-                      <div style="background-color: #1a1a1a; padding: 24px; border-radius: 12px; margin-bottom: 30px;">
+                      <div style="background-color: #1a1a1a !important; padding: 24px; border-radius: 12px; margin-bottom: 30px;">
                         <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
                           <tr>
                             <!-- Photo de profil placeholder -->
@@ -87,10 +95,10 @@ ${message}
                             
                             <!-- Informations -->
                             <td style="vertical-align: top; padding-left: 24px;">
-                              <h2 style="margin: 0 0 8px 0; color: #ffffff; font-size: 24px; font-weight: 700; letter-spacing: -0.5px;">
+                              <h2 style="margin: 0 0 8px 0 !important; color: #ffffff !important; font-size: 24px; font-weight: 700; letter-spacing: -0.5px;">
                                 ${prenom} ${nom}
                               </h2>
-                              <table role="presentation" cellpadding="0" cellspacing="0" style="background-color: rgba(255, 255, 255, 0.1); border-radius: 20px;">
+                              <table role="presentation" cellpadding="0" cellspacing="0" style="background-color: rgba(255, 255, 255, 0.1) !important; border-radius: 20px;">
                                 <tr>
                                   <td style="padding: 6px 6px 6px 12px;">
                                     <img src="https://vgil.fr/envelope.png" alt="Email" style="width: 16px; height: 16px; display: block; vertical-align: middle;" />
@@ -109,18 +117,18 @@ ${message}
 
                       <!-- Message -->
                       <div style="margin-bottom: 30px;">
-                        <h2 style="margin: 0 0 16px 0; color: #ffffff; font-size: 24px; font-weight: 600;">
+                        <h2 style="margin: 0 0 16px 0 !important; color: #ffffff !important; font-size: 24px; font-weight: 600;">
                           Message
                         </h2>
-                        <div style="background-color: #1a1a1a; padding: 20px; border-radius: 8px; color: #d0d0d0; font-size: 16px; line-height: 1.6;">
+                        <div style="background-color: #1a1a1a !important; padding: 20px; border-radius: 8px; color: #d0d0d0 !important; font-size: 16px; line-height: 1.6;">
                           ${message.replace(/\n/g, "<br>")}
                         </div>
                       </div>
 
                       <!-- Bouton de réponse -->
                       <div style="text-align: center; margin-top: 32px;">
-                        <a href="mailto:${email}" style="display: inline-flex; align-items: center; gap: 8px; background-color: #ffffff; color: #191919; padding: 14px 32px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 15px;">
-                          <span style="transform: translateY(-1px); display: inline-block;">Répondre au message</span>
+                        <a href="mailto:${email}" style="display: inline-flex; align-items: center; gap: 8px; background-color: #ffffff !important; color: #191919 !important; padding: 14px 32px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 15px;">
+                          <span style="transform: translateY(-1px); display: inline-block; color: #191919 !important;">Répondre au message</span>
                           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0;">
                             <path d="M14 5l7 7m0 0l-7 7m7-7H3"/>
                           </svg>
@@ -132,12 +140,12 @@ ${message}
 
                   <!-- Footer -->
                   <tr>
-                    <td style="background-color: #0f0f0f; padding: 24px 40px; text-align: center; border-top: 1px solid #2a2a2a;">
-                      <p style="margin: 0; color: #999999; font-size: 13px; line-height: 1.5;">
+                    <td style="background-color: #0f0f0f !important; padding: 24px 40px; text-align: center; border-top: 1px solid #2a2a2a;">
+                      <p style="margin: 0 !important; color: #999999 !important; font-size: 13px; line-height: 1.5;">
                         Ce message a été envoyé depuis le formulaire de contact de 
-                        <a href="https://vgil.fr" style="color: #ffffff; text-decoration: none; font-weight: 600;">vgil.fr</a>
+                        <a href="https://vgil.fr" style="color: #ffffff !important; text-decoration: none; font-weight: 600;">vgil.fr</a>
                       </p>
-                      <p style="margin: 8px 0 0 0; color: #666666; font-size: 12px;">
+                      <p style="margin: 8px 0 0 0 !important; color: #666666 !important; font-size: 12px;">
                         © ${new Date().getFullYear()} Valentin Gil. Tous droits réservés.
                       </p>
                     </td>
