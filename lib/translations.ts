@@ -29,7 +29,7 @@ export const translations = {
         uxUi: "UX/UI",
       },
       description:
-        "Étudiant de 2e année en BUT Métiers du Multimédia et de l'Internet à l'IUT d'Angoulême. Passionné par le développement web et le design, je crée des expériences utilisateur intuitives et esthétiques en combinant design et développement.",
+        "Étudiant de 2e année en BUT Métiers du Multimédia et de l'Internet à l'IUT d'Angoulême. Passionné par le développement web et le design, je crée des expériences utilisateur intuitives et esthétiques en combinant design et développement. Je souhaite intégrer une alternance en 3e année afin de mettre en pratique mes compétences techniques et contribuer à des projets digitaux en entreprise.",
       education: {
         title: "Mon parcours",
         iut: {
@@ -239,7 +239,7 @@ export const translations = {
         uxUi: "UX/UI",
       },
       description:
-        "Second-year student in Multimedia and Internet Technologies at the Institute of Technology of Angoulême. Passionate about web development and design, I create intuitive and aesthetic user experiences by combining design and development.",
+        "Second-year student in Multimedia and Internet Technologies at the Institute of Technology of Angoulême. Passionate about web development and design, I create intuitive and aesthetic user experiences by combining design and development. I am seeking a work-study position for my third year to further develop my technical skills and contribute to real-world digital projects.",
       education: {
         title: "My Education",
         iut: {
